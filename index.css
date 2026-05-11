@@ -1,0 +1,357 @@
+/* =====RESET===== */
+:root {
+    /* Colors */
+    --white: #ffffff;
+    --gray: #f4f4f4;
+    --gray-dark: #4a4a4a;
+    --blush: #fadadd;
+    --creative: #e76daa;
+    --navy: #000b75;
+    --success: #4caf50;
+
+    /* Typography */
+    --font-heading: "Playfair Display", serif;
+    --font-body: "Inter", sans-serif;
+
+    /* Layout */
+    --max-width: 1120px;
+    --max-width-narrow: 760px;
+    --border-radius: 20px;
+    --transition: 0.3s ease;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--white);
+    color: var(--gray-dark);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* ===== Shared layout ===== */
+.section-shell {
+    margin: 0 auto;
+    width: min(100% - 32px, var(--max-width));
+}
+
+/* ===== Buttons ===== */
+.btn {
+    padding: 13px 22px;
+    font-size: 0.98rem;
+    font-weight: 600;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition:
+        background-color var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        transform 0.2s ease,
+        box-shadow var(--transition);
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn:focus-visible {
+    outline: 3px solid rgba(231, 109, 170, 0.4);
+    outline-offset: 3px;
+}
+
+.btn-primary {
+    background: var(--navy);
+    color: var(--white);
+    box-shadow: 0 10px 22px rgba(0, 11, 117, 0.18);
+}
+
+.btn-primary:hover {
+    background: var(--creative);
+    color: var(--white);
+    box-shadow: 0 14px 28px rgba(231, 109, 170, 0.22);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--navy);
+    border-color: rgba(0, 11, 117, 0.22);
+}
+
+.btn-outline:hover {
+    background: var(--blush);
+    border-color: rgba(231, 109, 170, 0.4);
+}
+
+.btn-disabled,
+.btn-disabled:hover {
+    background: #e0e0e0;
+    color: #888888;
+    border-color: #e0e0e0;
+    box-shadow: none;
+    cursor: not-allowed;
+    pointer-events: none;
+    transform: none;
+    opacity: 0.95;
+}
+
+/* =====NAVBAR===== */
+.logo img {
+	height: 58px;
+	width: auto;
+	display: block;
+}
+
+.main-nav {
+	background-color: var(--white);
+	border-bottom: 1px solid #f0f0f0;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+}
+
+.nav-flex {
+	padding: 15px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav-links {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	gap: 30px;
+}
+
+.nav-links a {
+	color: var(--gray-dark);
+	text-decoration: none;
+	font-weight: 500;
+	font-size: 0.95rem;
+	transition: color var(--transition);
+}
+
+.nav-links a:hover {
+	color: var(--creative);
+}
+
+/* =====HERO SECTION =====*/
+.portfolio-hero {
+	padding: 120px 0 100px;
+	background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+	text-align: center;
+	border-bottom: 1px solid rgba(0, 11, 117, 0.05);
+}
+
+.hero-content {
+	margin: 0 auto;
+	max-width: 850px;
+}
+
+.hero-title {
+	margin-bottom: 24px;
+	color: var(--navy);
+	font-size: clamp(2.5rem, 5vw, 4rem);
+	font-family: var(--font-heading);
+	line-height: 1.1;
+}
+
+.hero-text {
+	margin: 0 auto 40px;
+	color: var(--gray-dark);
+	font-size: 1.15rem;
+	line-height: 1.8;
+	max-width: 65ch;
+}
+
+.hero-actions {
+	display: flex;  
+	justify-content: center;
+	gap: 20px;  
+}
+
+/* =====FEATURED PROJECTS =====*/
+.featured-projects {
+	padding: 80px 0;  
+}
+
+.project.featured {
+	display: grid;
+	grid-template-columns: 1.2fr 0.8fr;
+	gap: 40px;
+	align-items: center;
+	margin-bottom: 60px;
+	background: var(--white);
+	border-radius: var(--border-radius);
+	overflow: hidden;  
+}
+
+.project-hero {  
+  display: grid;  
+  grid-template-columns: 1.2fr 0.8fr;  
+  gap: 60px; /* Increased gap */  
+  align-items: center;  
+  background: var(--white);  
+  border-radius: var(--border-radius);  
+  padding: 50px; /* Added internal breathing room */  
+  margin-bottom: 40px;  
+  box-shadow: var(--shadow-soft);  
+}
+
+.featured-split {  
+  display: grid;  
+  grid-template-columns: 1fr 1fr;  
+  gap: 40px;  
+}
+
+.featured-split .project-card {  
+  background: var(--white);  
+  border-radius: var(--border-radius);  
+  padding: 40px; /* Space inside the split cards */  
+  box-shadow: var(--shadow-soft);  
+}  
+
+.project-image {
+	position: relative;
+	overflow: hidden;
+	border-radius: 12px;  
+}
+
+.project-image img {
+	width: 100%;
+	transition: transform 0.5s ease;  
+}
+
+.glow-effect:hover {
+	box-shadow: 0 20px 40px rgba(0, 11, 117, 0.08);
+	transform: translateY(-5px);
+	transition: all var(--transition);  
+}
+
+.project-category {
+	font-size: 0.85rem;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: var(--creative);
+	font-weight: 700;
+	display: block;
+	margin-bottom: 10px;  
+}
+
+/* Coming Soon Styling */  
+.coming-soon .project-image img {
+	filter: grayscale(40%) blur(2px);
+	opacity: 0.7;  
+}
+
+.coming-soon-overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	background: var(--navy);
+	color: var(--white);
+	padding: 8px 20px;
+	border-radius: 999px;
+	font-weight: 600;
+	font-size: 0.9rem;  
+}
+
+/* Featured Split (The 2 side-by-side) */  
+.featured-split {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+	margin-top: 30px;  
+}
+
+/* Staggered Grid (3 columns) */  
+.staggered-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 40px;
+	padding-top: 60px;  
+}
+
+/* Make the first grid item slightly different to break symmetry */  
+.grid-item:nth-child(2) {
+	margin-top: 40px; /* This "staggers" the second column down */  
+}
+
+.badge {
+	font-size: 0.75rem;
+	font-weight: 700;
+	color: var(--creative);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	display: block;
+	margin-bottom: 8px;  
+}
+
+.selected-work {
+	padding: 100px 0;  
+}
+
+.zig-zag-item {
+	display: flex;
+	align-items: center;
+	gap: 60px;
+	margin-bottom: 120px;  
+}
+
+/* This is the magic for the alternating sides */  
+.zig-reverse {
+	flex-direction: row-reverse;  
+}
+
+.zig-image {
+	flex: 1.2;  
+}
+
+.zig-image img {
+	width: 100%;
+	border-radius: var(--border-radius);
+	box-shadow: var(--shadow-soft);
+	transition: transform 0.4s ease;  
+}
+
+.zig-text {
+	flex: 0.8;  
+}
+
+.zig-text h3 {
+	font-family: var(--font-heading);
+	font-size: 2.2rem;
+	color: var(--navy);
+	margin-bottom: 15px;  
+}
+
+.zig-text p {
+	font-size: 1.05rem;
+	margin-bottom: 25px;
+	line-height: 1.7;  
+}
+
+/* Mobile Responsiveness */  
+@media (max-width: 900px) {
+	.zig-zag-item, .zig-reverse {
+		flex-direction: column;
+		gap: 30px;
+		margin-bottom: 60px;
+	}
+}
