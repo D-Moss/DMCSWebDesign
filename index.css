@@ -108,12 +108,6 @@ a {
 }
 
 /* =====NAVBAR===== */
-.logo img {
-	height: 58px;
-	width: auto;
-	display: block;
-}
-
 .main-nav {
 	background-color: var(--white);
 	border-bottom: 1px solid #f0f0f0;
@@ -127,6 +121,12 @@ a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+
+.logo img {
+	height: 58px;
+	width: auto;
+	display: block;
 }
 
 .nav-links {
@@ -189,40 +189,30 @@ a {
 	padding: 80px 0;  
 }
 
-.project.featured {
+.project-hero {
 	display: grid;
 	grid-template-columns: 1.2fr 0.8fr;
-	gap: 40px;
+	gap: 60px; /* Increased gap */
 	align-items: center;
-	margin-bottom: 60px;
 	background: var(--white);
 	border-radius: var(--border-radius);
-	overflow: hidden;  
+	padding: 50px; /* Added internal breathing room */
+	margin-bottom: 40px;
+	box-shadow: var(--shadow-soft);  
 }
 
-.project-hero {  
-  display: grid;  
-  grid-template-columns: 1.2fr 0.8fr;  
-  gap: 60px; /* Increased gap */  
-  align-items: center;  
-  background: var(--white);  
-  border-radius: var(--border-radius);  
-  padding: 50px; /* Added internal breathing room */  
-  margin-bottom: 40px;  
-  box-shadow: var(--shadow-soft);  
+.featured-split {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+	margin-top: 30px;  
 }
 
-.featured-split {  
-  display: grid;  
-  grid-template-columns: 1fr 1fr;  
-  gap: 40px;  
-}
-
-.featured-split .project-card {  
-  background: var(--white);  
-  border-radius: var(--border-radius);  
-  padding: 40px; /* Space inside the split cards */  
-  box-shadow: var(--shadow-soft);  
+.featured-split .project-card {
+	background: var(--white);
+	border-radius: var(--border-radius);
+	padding: 40px; /* Space inside the split cards */
+	box-shadow: var(--shadow-soft);  
 }  
 
 .project-image {
@@ -240,16 +230,6 @@ a {
 	box-shadow: 0 20px 40px rgba(0, 11, 117, 0.08);
 	transform: translateY(-5px);
 	transition: all var(--transition);  
-}
-
-.project-category {
-	font-size: 0.85rem;
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
-	color: var(--creative);
-	font-weight: 700;
-	display: block;
-	margin-bottom: 10px;  
 }
 
 /* Coming Soon Styling */  
@@ -272,25 +252,69 @@ a {
 	font-size: 0.9rem;  
 }
 
-/* Featured Split (The 2 side-by-side) */  
-.featured-split {
+/* =====SELECTED WORK===== */
+.gallery-selection {
+	padding: 100px 0;
+	background-color: var(--white);  
+}
+
+.gallery-selection .section-title {
+	text-align: center;
+	margin-bottom: 50px;  
+}
+
+.section-shell--wide {
+	margin: 0 auto;
+	width: min(100% - 40px, 1400px);   
+}
+
+.gallery-row {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: repeat(4, 1fr); /* All 4 side-by-side */
 	gap: 30px;
-	margin-top: 30px;  
+	justify-content: center;  
 }
 
-/* Staggered Grid (3 columns) */  
-.staggered-grid {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 40px;
-	padding-top: 60px;  
+.gallery-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Centers the image and text within the card */
+	text-align: center;   /* Centers the title and span text */  
 }
 
-/* Make the first grid item slightly different to break symmetry */  
-.grid-item:nth-child(2) {
-	margin-top: 40px; /* This "staggers" the second column down */  
+.gallery-image {
+	width: 100%;
+}
+
+.gallery-image img {
+	width: 100%;
+	aspect-ratio: 4 / 5; /* Makes all images consistent & portrait-style */
+	object-fit: cover;
+	border-radius: 12px;
+	margin-bottom: 20px;
+	filter: grayscale(20%); /* Subtle boutique effect */
+	transition: all var(--transition);  
+}
+
+.gallery-card:hover .gallery-image img {
+	filter: grayscale(0%);
+	transform: translateY(-5px);
+	box-shadow: var(--shadow-soft); 
+}
+
+.gallery-info h3 {
+	font-family: var(--font-heading);
+	font-size: 1.25rem;
+	margin-bottom: 5px;
+	color: var(--navy);  
+}
+
+.gallery-info span {
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	color: var(--creative);
+	letter-spacing: 1.5px;
+	font-weight: 700;  
 }
 
 .badge {
@@ -303,55 +327,9 @@ a {
 	margin-bottom: 8px;  
 }
 
-.selected-work {
-	padding: 100px 0;  
-}
-
-.zig-zag-item {
-	display: flex;
-	align-items: center;
-	gap: 60px;
-	margin-bottom: 120px;  
-}
-
-/* This is the magic for the alternating sides */  
-.zig-reverse {
-	flex-direction: row-reverse;  
-}
-
-.zig-image {
-	flex: 1.2;  
-}
-
-.zig-image img {
-	width: 100%;
-	border-radius: var(--border-radius);
-	box-shadow: var(--shadow-soft);
-	transition: transform 0.4s ease;  
-}
-
-.zig-text {
-	flex: 0.8;  
-}
-
-.zig-text h3 {
-	font-family: var(--font-heading);
-	font-size: 2.2rem;
-	color: var(--navy);
-	margin-bottom: 15px;  
-}
-
-.zig-text p {
-	font-size: 1.05rem;
-	margin-bottom: 25px;
-	line-height: 1.7;  
-}
-
-/* Mobile Responsiveness */  
-@media (max-width: 900px) {
-	.zig-zag-item, .zig-reverse {
-		flex-direction: column;
-		gap: 30px;
-		margin-bottom: 60px;
+/* On mobile, we drop it to a 2x2 so it's readable */  
+@media (max-width: 1000px) {
+	.gallery-row {
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
