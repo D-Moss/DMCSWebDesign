@@ -1,272 +1,339 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="index.css">
-	<title>DMCS Web Design | Website Portfolio</title>
+	<link rel="stylesheet" href="index.css">
+	<title>DM Creative Solutions</title>
 </head>
 <body>
 	<!--NAVIGATION BAR-->
-	<header class="main-nav">
-		<nav class="section-shell nav-flex">
-			<a href="https://www.dmcreativesolutions.com/" class="logo">
+	<header>
+		<nav class="site-nav" aria-label="Primary navigation">
+			<a href="#intro" class="site-logo" aria-label="DM Creative Solutions home">
 				<img src="https://i.postimg.cc/zfn1dfqc/android-chrome-192x192.png" alt="DM Creative Solutions logo">
 			</a>
-			<ul class="nav-links">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="designs.html">Web Designs</a></li>
-				<li><a href="#pricing">Pricing</a></li>
+
+			<ul class="site-nav__links" role="list">
+				<li><a href="#intro">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#paths">Explore</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
 
-	<!--HERO SECTION-->
-	<section class="portfolio-hero">
-		<div class="section-shell hero-content">
-			<h1 class="hero-title">Beautiful, structured websites for brands ready to level up</h1>
-			<p class="hero-text">
-				I create responsive websites with strong layout systems, clean UX, and intentional visual identity—built to grow with your business.
-			</p>
-			<div class="hero-actions">
-				<a href="#featured" class="btn btn-primary">View My Work</a>
-				<a href="#services" class="btn btn-outline">Explore Services</a>
-			</div>
-		</div>
-	</section>
+	<main>
+		<!-- HERO SECTION -->
+		<section id="intro" class="hero" aria-labelledby="hero-title">
+			<div class="hero__inner">
+				<div class="hero__content">
+					<h1 id="hero-title" class="hero__title">DM Creative Solutions</h1>
+					<p class="hero__text">
+						What started as a passion has grown into a space where I build websites, share honest reviews, and create work people can trust.
+					</p>
 
-	<!-- SMALL ABOUT ME SECTION -->
-	<section class="meet-designer">
-		<div class="section-shell">
-			<div class="strip-bio">
-				<div class="designer-intro">
-					<span class="designer-label">
-						The Designer
-					</span>
-					<p>Hi, I'm Diona, the founder of DMCS Web Design.</p>
-				</div>
-
-				<div class="designer-copy">
-					<p>I build custom websites for small businesses, entrepreneurs, and organizations that need a professional online presence without the complexity of a large agency. My focus is creating clean, responsive websites that are easy to use, easy to maintain, and built to support long-term growth.</p>
-					<a href="https://www.dmcreativesolutions.com/about" class="btn-link">Learn More About DMCS →</a>
+					<div class="hero__actions">
+						<a href="https://dmcsreviews.netlify.app/" class="btn btn-primary">View Reviews</a>
+						<a href="https://dmcswebdesign.netlify.app/" class="btn btn-secondary" aria-disabled="true">View Web Design</a>
+					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<!-- THE DYNAMIC TRIO -->
-	<section id="featured" class="featured-projects">
-		<div class="section-shell">
-			<h2 class="section-title">Featured Work</h2>
-
-			<!-- 1. Full Width Anchor -->
-			<div class="project-hero glow-effect">
-				<div class="project-image">
-					<img src="images/729shots_so.png" alt="Tovana's Restaurant">
+		<!-- ABOUT SECTION -->
+		<section id="about" class="about" aria-labelledby="about-title">
+			<div class="section-shell">
+				<div class="section-heading section-heading--center">
+					<h2 id="about-title" class="section-title">About Me</h2>
 				</div>
-				<div class="project-info">
-					<span class="badge">Custom Brand</span>
 
-					<h3>Tovana's Restaurant</h3>
-					<p>A high-end restaurant concept featuring a full multi-course menu and immersive brand identity.</p>
-					<a href="https://tovanas.netlify.app/" class="btn btn-outline" target="_blank">View Case Study →</a>
-				</div>
-			</div>
-
-			<!-- 2 & 3. Side-by-Side Split -->
-			<div class="featured-split">
-				<div class="project-card glow-effect coming-soon">
-					<div class="project-image">
-						<div class="coming-soon-overlay">
-							<span>Coming Soon</span>
+				<div class="about__grid">
+					<article class="about__column">
+						<h3>My Journey</h3>
+						<div class="about__preview">
+							<p>
+								Hi, I’m Diona, the creator behind DM Creative Solutions. Before starting DMCS, I was working multiple jobs.
+							</p>
 						</div>
-						<img src="https://i.postimg.cc/Dw5Qc7pk/Fin-Flow-Dashboard.webp" alt="FinFlow">
-					</div>
-					<div class="project-info">
-						<span class="badge">Web App</span>
-						<h3>FinFlow</h3>
-						<p>Automated bookkeeping and expense tracking designed for self-employed professionals and small businesses</p>
-					</div>
+
+						<div class="about__more">
+							<p>
+								During COVID, everything slowed down, and that’s when I found my way into tech. I started with a course in Information Technology and Customer Service, and after completing it, I wanted to learn more. What started as curiosity quickly turned into something more—it wasn’t something I planned.
+							</p>
+						</div>
+
+						<button class="about__toggle" type="button">
+							Read More
+						</button>
+					</article>
+
+					<article class="about__column">
+						<h3>Finding Web Design</h3>
+						<div class="about__preview">
+							<p>
+								I found HTML, CSS, and JavaScript, and from there, I was hooked.
+							</p>
+						</div>
+
+						<div class="about__more">
+							<p>
+								Creating websites became more than just something to learn—it became a creative outlet. It feels like painting. I start with a blank canvas and watch my ideas come to life on the screen. As a self-taught developer with multiple certifications, I’ve continued to build my skills, creating multiple sites and growing my confidence along the way.
+							</p>
+						</div>
+
+						<button class="about__toggle" type="button">
+							Read More
+						</button>
+					</article>
+
+					<article class="about__column">
+						<h3>Why Reviews Matter</h3>
+
+						<div class="about__preview">
+							<p>
+								Writing reviews has always been something I’ve enjoyed.
+							</p>
+						</div>
+
+						<div class="about__more">
+							<p>
+								I rely on reviews to make my own decisions, so I wanted to provide that same value to others. I’ve written reviews on platforms like Google and Amazon, always focusing on being honest and helpful. As an Amazon Vine reviewer and someone whose Google reviews reach thousands of people, I’ve seen firsthand how much reviews can influence and help others.
+							</p>
+						</div>
+
+						<button class="about__toggle" type="button">
+							Read More
+						</button>
+					</article>
+
+					<article class="about__column">
+						<h3>The Vision</h3>
+
+						<div class="about__preview">
+							<p>
+								DM Creative Solutions came from combining both of these passions—creating websites and writing honest reviews.
+							</p>
+						</div>
+
+						<div class="about__more">
+							<p>
+								I wanted to build something of my own, something that reflects what I enjoy doing while also helping others. Since this is something I’m truly passionate about, I’m willing to work hard to create something that reflects someone else’s passion just as much as my own.
+							</p>
+
+							<p>
+								Whether it’s designing a website or sharing a review, my goal is to create work that people can trust. DMCS continues to grow, and my vision is simple: to build a brand that provides value, attracts a strong following, and connects with people who appreciate honest content and thoughtful design.
+							</p>
+						</div>
+
+						<button class="about__toggle" type="button">
+							Read More
+						</button>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- EXPLORE MORE SECTION -->
+		<section id="paths" class="explore" aria-labelledby="explore-title">
+			<div class="section-shell">
+				<div class="section-heading section-heading--center">
+					<h2 id="explore-title" class="section-title">Explore DMCS</h2>
+					<p class="section-text">
+						From honest reviews to custom-built websites, explore the work that brings DMCS to life.
+					</p>
 				</div>
 
-				<div class="project-card glow-effect">
-					<div class="project-image">
-						<img src="https://i.postimg.cc/XqZYGkZh/Pet-Project.webp" alt="Pet Tribute">
+				<div class="explore-grid">
+					<article class="explore-card" id="reviews-preview">
+						<div class="explore-card__content">
+							<h3 class="explore-card__title">DMCS Reviews</h3>
+							<p class="explore-card__text">
+								Honest reviews of products, places, and everyday finds based on my real experience.
+							</p>
+
+							<div class="teaser-grid">
+								<div class="teaser-card">
+									<h4>Product Reviews</h4>
+									<p>Everyday purchases, household items, and things I’ve actually used.</p>
+								</div>
+
+								<div class="teaser-card">
+									<h4>Place Reviews</h4>
+									<p>Restaurants, attractions, and experiences I’ve visited and can speak on honestly.</p>
+								</div>
+							</div>
+
+							<a href="https://dmcsreviews.netlify.app/" class="btn btn-primary">Go to Reviews</a>
+						</div>
+					</article>
+
+					<article class="explore-card" id="design-preview">
+						<div class="explore-card__content">
+							<h3 class="explore-card__title">DMCS Web Design</h3>
+							<p class="explore-card__text">
+								A growing collection of hand-coded websites designed with care, clarity, and personality.
+							</p>
+
+							<div class="teaser-grid">
+								<div class="teaser-card">
+									<h4>Custom Layouts</h4>
+									<p>Clean, responsive websites built to reflect each brand clearly and thoughtfully.</p>
+								</div>
+
+								<div class="teaser-card">
+									<h4>Coming Soon</h4>
+									<p>This side of DMCS is still growing, but it will eventually showcase projects and services.</p>
+								</div>
+							</div>
+
+							<a href="https://dmcswebdesign.netlify.app/" class="btn btn-secondary" aria-disabled="true">Go to Web Design</a>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<!-- CONTACT SECTION -->
+		<section id="contact" class="contact" aria-labelledby="contact-title">
+			<div class="section-shell">
+				<div class="section-heading section-heading--center">
+					<h2 id="contact-title" class="section-title">Let’s Connect</h2>
+					<p class="section-text">
+						Have a project in mind or a question? I’d love to hear from you.
+					</p>
+				</div>
+
+				<form
+					class="contact-form"
+					name="contact"
+					method="POST"
+					data-netlify="true"
+					data-netlify-honeypot="bot-field"
+					action="/thank-you.html"
+				>
+					<input type="hidden" name="form-name" value="contact">
+
+					<p class="sr-only">
+						<label>Don’t fill this out: <input name="bot-field"></label>
+					</p>
+
+					<div class="form-grid">
+						<label class="form-field">
+							<span>Name</span>
+							<input type="text" name="name" required>
+						</label>
+
+						<label class="form-field">
+							<span>Email</span>
+							<input type="email" name="email" required>
+						</label>
 					</div>
-					<div class="project-info">
-						<span class="badge">Storytelling</span>
-						<h3>Pet Tribute</h3>
-						<p>A heartfelt digital tribute preserving memories through storytelling, imagery, and thoughtful design</p>
-						<a href="https://preeminent-buttercream-5f1d8f.netlify.app/" class="link-arrow" target="_blank">Read the Story →</a>
+
+					<label class="form-field">
+						<span>Message</span>
+						<textarea name="message" rows="6" required></textarea>
+					</label>
+
+					<button type="submit" class="btn btn-primary">Send Message</button>
+				</form>
+
+				<div class="social-grid">
+					<div class="social-card">
+						<h3>DMCS Reviews</h3>
+						<p>
+							Follow along for honest reviews, recommendations, and everyday finds.
+						</p>
+						<a href="#">Instagram</a>
+						<a href="#">Facebook</a>
+					</div>
+
+					<div class="social-card">
+						<h3>DMCS Web Design</h3>
+						<p>
+							See website projects, design updates, and behind-the-scenes work.
+						</p>
+						<a href="#">Instagram</a>
+						<a href="#">Facebook</a>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+	</main>
 
-	<!-- SELECTED WORK -->
-	<section class="gallery-selection">
-		<div class="section-shell--wide">
-			<h2 class="section-title">Selected Work</h2>
-
-			<div class="gallery-row">
-				<!-- Dream Vacation -->
-				<div class="gallery-card">
-					<img src="https://i.postimg.cc/MG2CSbby/DreamVacation.webp" alt="Dream Vacation">
-					<div class="gallery-info">
-						<h3>Dream Vacation</h3>
-						<span class="badge">Travel & Lifestyle</span>
-						<p>
-							A destination-inspired travel website showcasing hotels, attractions, and vacation planning resources
-						</p>
-					</div>
-					<a href="https://vocal-centaur-04f237.netlify.app/" class="gallery-btn" target="_blank">View Project</a>
-				</div>
-
-				<!-- On Repeat -->
-				<div class="gallery-card">
-					<img src="https://i.postimg.cc/GpwWCJJY/OnRepeat.webp" alt="On Repeat">
-					<div class="gallery-info">
-						<h3>On Repeat</h3>
-						<span class="badge">Music & Media</span>
-						<p>
-							A curated music experience built around meaningful songs, playlists, and personal discovery
-						</p>
-					</div>
-					<a href="https://on-repeat.netlify.app/" class="gallery-btn" target="_blank">View Project</a>
-				</div>
-
-				<!-- Forecast -->
-				<div class="gallery-card">
-					<img src="https://i.postimg.cc/8CQ2SBBv/Forecast.webp" alt="Forecast App">
-					<div class="gallery-info">
-						<h3>Forecast</h3>
-						<span class="badge">Web Application</span>
-						<p>
-							A responsive weather dashboard that transforms forecast data into a clean and intuitive user experience
-						</p>
-					</div>
-					<a href="https://dm-forecast-app.netlify.app/" class="gallery-btn" target="_blank">View Project</a>
-				</div>
-
-				<!-- Nectar Life -->
-				<div class="gallery-card">
-					<img src="https://i.postimg.cc/KYS62rrB/NectarLife.webp" alt="Nectar Life">
-					<div class="gallery-info">
-						<h3>Nectar Life</h3>
-						<span class="badge">Beauty & Wellness</span>
-						<p>
-							A visually rich online storefront designed to showcase handcrafted bath and body products
-						</p>
-					</div>
-					<a href="https://nectar-life.netlify.app/" class="gallery-btn" target="_blank">View Project</a>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- PRICING -->
-	<section class="table-style" id="pricing">
-		<h3>Investment Tiers</h3>
-		<p>Custom-coded solutions tailored to your brand</p>
-
-		<table class="pricing-table">
-			<thead>
-				<tr>
-					<th>Features</th>
-					<th>Trust Builder<br><span>$900</span></th>
-					<th>Creative Core<br><span>$2,500 - $3,500</span></th>
-					<th>Brand Authority<br><span>$5,000+</span></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Custom HTML/CSS/JS</td>
-					<td><i class="fa fa-check"></i></td>
-					<td><i class="fa fa-check"></i></td>
-					<td><i class="fa fa-check"></i></td>
-				</tr>
-				<tr>
-					<td>Mobile-First Responsive Design</td>
-					<td><i class="fa fa-check"></i></td>
-					<td><i class="fa fa-check"></i></td>
-					<td><i class="fa fa-check"></i></td>
-				</tr>
-				<tr>
-					<td>SEO Optimization</td>
-					<td><i class="fa fa-check"></i></td>
-					<td><i class="fa fa-check"></i></td>
-					<td><i class="fa fa-check"></i></td>
-				</tr>
-				<tr>
-					<td>Multi-Page Architecture</td>
-					<td><i class="fa fa-remove"></i></td>
-					<td><i class="fa fa-check"></i></td>
-					<td><i class="fa fa-check"></i></td>
-				</tr>
-				<tr>
-					<td>Custom Animations</td>
-					<td><i class="fa fa-remove"></i></td>
-					<td><i class="fa fa-remove"></i></td>
-					<td><i class="fa fa-check"></i></td>
-				</tr>
-			</tbody>
-		</table> 
-	</section>
-
-	<!--- FOOTER --->
+	<!-- FOOTER -->
 	<footer class="site-footer" aria-label="Site footer">
 		<div class="footer-inner">
 
 			<div class="footer-brand">
-				<a href="index.html" class="footer-logo">DMCS Web Design</a>
+				<a href="#intro" class="footer-logo">DM Creative Solutions</a>
 				<p class="footer-note">
-					Beautiful, structured websites for brands ready to level up.
+					A creative hub for web design, honest reviews, and thoughtful digital work.
 				</p>
 			</div>
 
 			<nav class="footer-nav" aria-label="Footer">
+
 				<div class="footer-col">
-					<p class="footer-title">Services</p>
+					<p class="footer-title">Explore</p>
 					<ul class="footer-links" role="list">
-						<li><a href="designs.html">Web Designs</a></li>
-						<li><a href="index.html#services">Pricing</a></li>
+						<li><a href="#intro">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#paths">Explore</a></li>
+						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</div>
 
 				<div class="footer-col">
-					<p class="footer-title">Company</p>
+					<p class="footer-title">Projects</p>
 					<ul class="footer-links" role="list">
-						<li><a href="index.html#about">About</a></li>
-						<li><a href="https://www.dmcreativesolutions.com/#contact">Contact</a></li>
-						<li><a href="https://www.dmcreativesolutions.com/reviews">Reviews Side</a></li>
+						<li><a href="https://dmcsreviews.netlify.app/">DMCS Reviews</a></li>
+						<li><a href="https://dmcswebdesign.netlify.app/">Web Design</a></li>
 					</ul>
 				</div>
 
-				<div class="footer-col">
-					<p class="footer-title">Connect</p>
-					<ul class="footer-links" role="list">
-						<li><a href="mailto:dmcreativesolutions.tech@gmail.com">dmcreativesolutions.tech@gmail.com</a></li>
-						<li class="footer-social">
-							<a href="https://www.instagram.com/dmcs.reviews/" target="_blank" rel="noopener noreferrer">Instagram</a>
-							<a href="https://www.facebook.com/profile.php?id=61583983431972" target="_blank" rel="noopener noreferrer">Facebook</a>
+				<div class="site-footer__col">
+					<p class="site-footer__title">Contact</p>
+					<ul class="site-footer__links" role="list">
+						<li>
+							<a href="mailto:dmcreativesolutions.tech@gmail.com">
+								dmcreativesolutions.tech@gmail.com
+							</a>
+						</li>
+
+						<!-- Optional LinkedIn -->
+						<li>
+							<a href="https://www.linkedin.com/in/diona-moss/" target="_blank" rel="noopener noreferrer">
+								LinkedIn
+							</a>
+						</li>
+
+						<!-- Optional Phone -->
+						<li>
+							<a href="tel:+12155551234">
+								(215) 395-3937
+							</a>
 						</li>
 					</ul>
 				</div>
+
 			</nav>
 
 			<div class="footer-bottom">
-				<p>© <span id="year"></span> DM Creative Solutions. All rights reserved.</p>
+				<p>© <span id="year"></span> DMCS Reviews. All rights reserved.</p>
 			</div>
+
 		</div>
-		<script>
-			document.getElementById("year").textContent = new Date().getFullYear();
-		</script>
 	</footer>
+
+	<script>
+		document.getElementById("year").textContent = new Date().getFullYear();
+	</script>
+	<script src="index.js"></script>
 </body>
 </html>
+
+
