@@ -1,272 +1,666 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="index.css">
-	<title>DMCS Web Design | Website Portfolio</title>
+	<link rel="stylesheet" href="index.css">
+	<title>DM Creative Solutions | Custom Website Design</title>
 </head>
 <body>
-	<!--NAVIGATION BAR-->
-	<header class="main-nav">
-		<nav class="section-shell nav-flex">
-			<a href="https://www.dmcreativesolutions.com/" class="logo">
+	<!-- NAVIGATION BAR -->
+	<header class="site-header">
+		<nav class="site-nav" aria-label="Primary navigation">
+			<a href="#intro" class="site-logo" aria-label="DM Creative Solutions home">
 				<img src="https://i.postimg.cc/zfn1dfqc/android-chrome-192x192.png" alt="DM Creative Solutions logo">
+				<span class="site-logo__text"> DM Creative Solutions </span>
 			</a>
-			<ul class="nav-links">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="designs.html">Web Designs</a></li>
-				<li><a href="#pricing">Pricing</a></li>
-				<li><a href="#contact">Contact</a></li>
-			</ul>
+			
+			<button class="site-nav__toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			<div class="site-nav__menu" id="primary-menu">
+				<ul class="site-nav__links" role="list">
+					<li><a href="#intro">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#selected-work">Work</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#price">Pricing</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</div>
 		</nav>
 	</header>
 
-	<!--HERO SECTION-->
-	<section class="portfolio-hero">
-		<div class="section-shell hero-content">
-			<h1 class="hero-title">Beautiful, structured websites for brands ready to level up</h1>
-			<p class="hero-text">
-				I create responsive websites with strong layout systems, clean UX, and intentional visual identity—built to grow with your business.
-			</p>
-			<div class="hero-actions">
-				<a href="#featured" class="btn btn-primary">View My Work</a>
-				<a href="#services" class="btn btn-outline">Explore Services</a>
-			</div>
-		</div>
-	</section>
-
-	<!-- SMALL ABOUT ME SECTION -->
-	<section class="meet-designer">
-		<div class="section-shell">
-			<div class="strip-bio">
-				<div class="designer-intro">
-					<span class="designer-label">
-						The Designer
-					</span>
-					<p>Hi, I'm Diona, the founder of DMCS Web Design.</p>
-				</div>
-
-				<div class="designer-copy">
-					<p>I build custom websites for small businesses, entrepreneurs, and organizations that need a professional online presence without the complexity of a large agency. My focus is creating clean, responsive websites that are easy to use, easy to maintain, and built to support long-term growth.</p>
-					<a href="https://www.dmcreativesolutions.com/about" class="btn-link">Learn More About DMCS →</a>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- THE DYNAMIC TRIO -->
-	<section id="featured" class="featured-projects">
-		<div class="section-shell">
-			<h2 class="section-title">Featured Work</h2>
-
-			<!-- 1. Full Width Anchor -->
-			<div class="project-hero glow-effect">
-				<div class="project-image">
-					<img src="https://i.postimg.cc/jqm3fmRh/729shots-so.png" alt="Tovana's Restaurant">
-				</div>
-				<div class="project-info">
-					<span class="badge">Custom Brand</span>
-
-					<h3>Tovana's Restaurant</h3>
-					<p>A high-end restaurant concept featuring a full multi-course menu and immersive brand identity.</p>
-					<a href="https://tovanas.netlify.app/" class="btn btn-outline" target="_blank">View Case Study →</a>
-				</div>
+	<main>
+		<!-- HERO SECTION -->
+		<section class="hero" id="intro">
+			<div class="hero__flow-lines" aria-hidden="true">
+				<span class="hero__flow-line hero__flow-line--1"></span>
+				<span class="hero__flow-line hero__flow-line--2"></span>
+				<span class="hero__flow-line hero__flow-line--3"></span>
+				<span class="hero__flow-line hero__flow-line--4"></span>
+				<span class="hero__flow-line hero__flow-line--5"></span>
 			</div>
 
-			<!-- 2 & 3. Side-by-Side Split -->
-			<div class="featured-split">
-				<div class="project-card glow-effect coming-soon">
-					<div class="project-image">
-						<div class="coming-soon-overlay">
-							<span>Coming Soon</span>
+			<div class="hero__container">
+				<div class="hero__content">
+					<p class="hero__eyebrow">Websites That</p>
+					<h1 class="hero__title"> Elevate<br> Your Brand.
+						<span>Drive Results.</span>
+					</h1>
+
+					<div class="hero__accent-line" aria-hidden="true"></div>
+					<p class="hero__description"> Custom websites designed and developed to help businesses stand out, build trust, and convert more customers. </p>
+					<div class="hero__actions">
+						<a href="#work" class="button button--primary"> View Our Work <span aria-hidden="true">→</span> </a>
+
+						<a href="#about" class="hero__scroll-link"> <span>Scroll to Explore</span> <span class="hero__scroll-arrow" aria-hidden="true">↓</span> </a>
+					</div>
+				</div>
+
+				<div class="hero__visual">
+					<div class="portfolio-browser">
+						<div class="portfolio-browser__bar">
+							<div class="portfolio-browser__controls" aria-hidden="true">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
 						</div>
-						<img src="https://i.postimg.cc/Dw5Qc7pk/Fin-Flow-Dashboard.webp" alt="FinFlow">
-					</div>
-					<div class="project-info">
-						<span class="badge">Web App</span>
-						<h3>FinFlow</h3>
-						<p>Automated bookkeeping and expense tracking designed for self-employed professionals and small businesses</p>
-					</div>
-				</div>
 
-				<div class="project-card glow-effect">
-					<div class="project-image">
-						<img src="https://i.postimg.cc/XqZYGkZh/Pet-Project.webp" alt="Pet Tribute">
-					</div>
-					<div class="project-info">
-						<span class="badge">Storytelling</span>
-						<h3>Pet Tribute</h3>
-						<p>A heartfelt digital tribute preserving memories through storytelling, imagery, and thoughtful design</p>
-						<a href="https://preeminent-buttercream-5f1d8f.netlify.app/" class="link-arrow" target="_blank">Read the Story →</a>
+						<div class="portfolio-browser__topline">
+							<span>DM Creative Solutions</span>
+							<span>Designing Digital Experiences That Matter</span>
+						</div>
+
+						<div class="portfolio-browser__body">
+							<div class="portfolio-browser__main">
+								<div class="portfolio-intro">
+									<h2> Thoughtful design.<br> Strategic purpose.<br>
+										<span>Stronger connections.</span>
+									</h2>
+								</div>
+
+								<div class="featured-project">
+									<p class="featured-project__label">Featured Work</p>
+									<div class="featured-project__image">
+										<img src="https://i.postimg.cc/k5HzJF9g/dream-vacation.webp" alt="Dream Vacation website project preview">
+										<div class="featured-project__overlay">
+											<p>Dreams Included</p>
+											<h3>Dream Vacation</h3>
+											<span>Travel &amp; Hospitality</span>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<aside class="portfolio-sidebar" aria-label="Website design services">
+								<div class="portfolio-sidebar__section">
+									<p class="portfolio-sidebar__heading">What I Do</p>
+									<ul class="portfolio-sidebar__list">
+										<li>
+											<span aria-hidden="true">✓</span> Custom Website Design
+										</li>
+										<li>
+											<span aria-hidden="true">✓</span> Responsive Development
+										</li>
+										<li>
+											<span aria-hidden="true">✓</span> User-Friendly Design
+										</li>
+										<li>
+											<span aria-hidden="true">✓</span> Clean Development
+										</li>
+										<li>
+											<span aria-hidden="true">✓</span> Ongoing Support
+										</li>
+									</ul>
+								</div>
+
+								<div class="portfolio-sidebar__section portfolio-sidebar__approach">
+									<p class="portfolio-sidebar__heading">Design Approach</p>
+									<p> Strategy<br> Creativity<br> Clean Code<br> Results </p>
+									<span aria-hidden="true"></span>
+								</div>
+							</aside>
+						</div>
+
+						<div class="project-thumbnails">
+							<article class="project-thumbnail">
+								<div class="project-thumbnail__image">
+									<img src="https://i.postimg.cc/DzNHvdFz/tovanas-restaurant.webp" alt="Tovana's Restaurant website preview">
+								</div>
+								<h3>Tovana’s Restaurant</h3>
+								<p>Restaurant Website</p>
+							</article>
+
+							<article class="project-thumbnail">
+								<div class="project-thumbnail__image">
+									<img src="https://i.postimg.cc/QMzw8ksj/forecast.webp" alt="Forecast weather application preview">
+								</div>
+								<h3>Forecast</h3>
+								<p>Weather Application</p>
+							</article>
+
+							<article class="project-thumbnail">
+								<div class="project-thumbnail__image">
+									<img src="https://i.postimg.cc/cJz2xMZ4/on-repeat.webp" alt="On Repeat music experience preview">
+								</div>
+								<h3>On Repeat</h3>
+								<p>Music Experience</p>
+							</article>
+
+							<article class="project-thumbnail">
+								<div class="project-thumbnail__image">
+									<img src="https://i.postimg.cc/N0nSs7YM/pet-tribute.webp" alt="Pet Tribute website preview">
+								</div>
+								<h3>Pet Tribute</h3>
+								<p>Storytelling Website</p>
+							</article>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<!-- SELECTED WORK -->
-	<section class="gallery-selection">
-		<div class="section-shell--wide">
-			<h2 class="section-title">Selected Work</h2>
-
-			<div class="gallery-row">
-				<!-- Dream Vacation -->
-				<div class="gallery-card">
-					<img src="https://i.postimg.cc/MG2CSbby/DreamVacation.webp" alt="Dream Vacation">
-					<div class="gallery-info">
-						<h3>Dream Vacation</h3>
-						<span class="badge">Travel & Lifestyle</span>
-						<p>
-							A destination-inspired travel website showcasing hotels, attractions, and vacation planning resources
-						</p>
+		<!-- SMALL ABOUT ME SECTION -->
+		<section class="meet-designer" id="about">
+			<div class="section-shell">
+				<div class="strip-bio">
+					<div class="designer-intro">
+						<span class="designer-label"> The Designer </span>
+						<p>Hi, I'm Diona, the founder of DMCS Web Design.</p>
 					</div>
-					<a href="https://vocal-centaur-04f237.netlify.app/" class="gallery-btn" target="_blank">View Project</a>
-				</div>
-
-				<!-- On Repeat -->
-				<div class="gallery-card">
-					<img src="https://i.postimg.cc/GpwWCJJY/OnRepeat.webp" alt="On Repeat">
-					<div class="gallery-info">
-						<h3>On Repeat</h3>
-						<span class="badge">Music & Media</span>
-						<p>
-							A curated music experience built around meaningful songs, playlists, and personal discovery
-						</p>
+					
+					<div class="designer-copy">
+						<p>I design and develop custom websites for businesses that want more than just another template. Every project is designed from the ground up with clean code, responsive layouts, and thoughtful user experiences. My goal is simple: create websites that businesses are proud to share.</p>
+						<a href="https://www.dmcreativesolutions.com/about" class="btn-link">Learn More About DMCS →</a>
 					</div>
-					<a href="https://on-repeat.netlify.app/" class="gallery-btn" target="_blank">View Project</a>
-				</div>
-
-				<!-- Forecast -->
-				<div class="gallery-card">
-					<img src="https://i.postimg.cc/8CQ2SBBv/Forecast.webp" alt="Forecast App">
-					<div class="gallery-info">
-						<h3>Forecast</h3>
-						<span class="badge">Web Application</span>
-						<p>
-							A responsive weather dashboard that transforms forecast data into a clean and intuitive user experience
-						</p>
-					</div>
-					<a href="https://dm-forecast-app.netlify.app/" class="gallery-btn" target="_blank">View Project</a>
-				</div>
-
-				<!-- Nectar Life -->
-				<div class="gallery-card">
-					<img src="https://i.postimg.cc/KYS62rrB/NectarLife.webp" alt="Nectar Life">
-					<div class="gallery-info">
-						<h3>Nectar Life</h3>
-						<span class="badge">Beauty & Wellness</span>
-						<p>
-							A visually rich online storefront designed to showcase handcrafted bath and body products
-						</p>
-					</div>
-					<a href="https://nectar-life.netlify.app/" class="gallery-btn" target="_blank">View Project</a>
 				</div>
 			</div>
-		</div>
-	</section>
+		</section>
 
-	<!-- PRICING -->
-	<section class="table-style" id="pricing">
-		<h3>Investment Tiers</h3>
-		<p>Custom-coded solutions tailored to your brand</p>
+		<!-- FEATURED WORK SECTION -->
+		<section class="selected-work" id="selected-work">
+			<div class="section-shell">
+				<div class="section-heading section-heading--split">
+					<div>
+						<p class="section-eyebrow">Selected Work</p>
+						<h2>A few websites we’re proud of</h2>
+					</div>
 
-		<table class="pricing-table">
-			<thead>
-				<tr>
-					<th>Features</th>
-					<th>Trust Builder<br><span>$900</span></th>
-					<th>Creative Core<br><span>$2,500 - $3,500</span></th>
-					<th>Brand Authority<br><span>$5,000+</span></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Custom HTML/CSS/JS</td>
-					<td><i class="fa fa-check"></i></td>
-					<td><i class="fa fa-check"></i></td>
-					<td><i class="fa fa-check"></i></td>
-				</tr>
-				<tr>
-					<td>Mobile-First Responsive Design</td>
-					<td><i class="fa fa-check"></i></td>
-					<td><i class="fa fa-check"></i></td>
-					<td><i class="fa fa-check"></i></td>
-				</tr>
-				<tr>
-					<td>SEO Optimization</td>
-					<td><i class="fa fa-check"></i></td>
-					<td><i class="fa fa-check"></i></td>
-					<td><i class="fa fa-check"></i></td>
-				</tr>
-				<tr>
-					<td>Multi-Page Architecture</td>
-					<td><i class="fa fa-remove"></i></td>
-					<td><i class="fa fa-check"></i></td>
-					<td><i class="fa fa-check"></i></td>
-				</tr>
-				<tr>
-					<td>Custom Animations</td>
-					<td><i class="fa fa-remove"></i></td>
-					<td><i class="fa fa-remove"></i></td>
-					<td><i class="fa fa-check"></i></td>
-				</tr>
-			</tbody>
-		</table> 
-	</section>
+					<p class="section-heading__copy">
+						Explore a selection of real projects built with distinct goals, audiences, and visual directions in mind.
+                    </p>
+                </div>
 
-	<!--- FOOTER --->
-	<footer class="site-footer" aria-label="Site footer">
-		<div class="footer-inner">
+                <div class="work-tabs" role="tablist" aria-label="Selected projects">
+                	<button class="work-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="project-panel" data-project="tovanas">
+                		Tovana’s
+                	</button>
 
-			<div class="footer-brand">
-				<a href="index.html" class="footer-logo">DMCS Web Design</a>
-				<p class="footer-note">
-					Beautiful, structured websites for brands ready to level up.
-				</p>
-			</div>
+                	<button class="work-tab" type="button" role="tab" aria-selected="false" aria-controls="project-panel" data-project="pet-tribute">
+                		Pet Tribute
+                	</button>
 
-			<nav class="footer-nav" aria-label="Footer">
-				<div class="footer-col">
-					<p class="footer-title">Services</p>
-					<ul class="footer-links" role="list">
-						<li><a href="designs.html">Web Designs</a></li>
-						<li><a href="index.html#services">Pricing</a></li>
-					</ul>
-				</div>
+                	<button class="work-tab" type="button" role="tab" aria-selected="false" aria-controls="project-panel" data-project="dream-vacation">
+                		Dream Vacation
+                	</button>
 
-				<div class="footer-col">
-					<p class="footer-title">Company</p>
-					<ul class="footer-links" role="list">
-						<li><a href="index.html#about">About</a></li>
-						<li><a href="https://www.dmcreativesolutions.com/#contact">Contact</a></li>
-						<li><a href="https://www.dmcreativesolutions.com/reviews">Reviews Side</a></li>
-					</ul>
-				</div>
+                	<button class="work-tab" type="button" role="tab" aria-selected="false" aria-controls="project-panel" data-project="forecast">
+                		Forecast
+                	</button>
 
-				<div class="footer-col">
-					<p class="footer-title">Connect</p>
-					<ul class="footer-links" role="list">
-						<li><a href="mailto:dmcreativesolutions.tech@gmail.com">dmcreativesolutions.tech@gmail.com</a></li>
-						<li class="footer-social">
-							<a href="https://www.instagram.com/dmcs.reviews/" target="_blank" rel="noopener noreferrer">Instagram</a>
-							<a href="https://www.facebook.com/profile.php?id=61583983431972" target="_blank" rel="noopener noreferrer">Facebook</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
+                	<button class="work-tab" type="button" role="tab" aria-selected="false" aria-controls="project-panel" data-project="on-repeat">
+                		On Repeat
+                	</button>
+                </div>
 
-			<div class="footer-bottom">
-				<p>© <span id="year"></span> DM Creative Solutions. All rights reserved.</p>
-			</div>
-		</div>
-		<script>
-			document.getElementById("year").textContent = new Date().getFullYear();
-		</script>
-	</footer>
+                <div class="work-showcase" id="project-panel" role="tabpanel">
+                	<button class="work-arrow work-arrow--previous" type="button" aria-label="Show previous project">
+                		←
+                	</button>
+
+                	<div class="work-showcase__visual">
+                		<div class="work-browser">
+                			<div class="work-browser__bar">
+                				<span></span>
+                				<span></span>
+                				<span></span>
+                			</div>
+
+                			<img id="work-image" src="images/TovanasDiner.png" alt="Tovana's Restaurant website">
+                		</div>
+                	</div>
+
+                	<div class="work-showcase__content">
+                		<p class="work-showcase__type" id="work-type">
+                			Restaurant Website
+                		</p>
+
+                		<h3 id="work-title">Tovana’s Restaurant</h3>
+                		<p id="work-description">
+                			A warm, inviting restaurant website designed to make menu details, hours, location information, and contact options easy to find.
+                		</p>
+
+                		<ul id="work-features">
+                			<li>Responsive Design</li>
+                			<li>Online Menu</li>
+                			<li>Location &amp; Hours</li>
+                			<li>Gallery</li>
+                			<li>Contact Form</li>
+                		</ul>
+
+                		<a href="https://tovanas.netlify.app/" class="text-link" id="work-link" rel="noopener" target="_blank">
+                			View Live Site
+                			<span aria-hidden="true">→</span>
+                		</a>
+                	</div>
+
+                	<button class="work-arrow work-arrow--next" type="button" aria-label="Show next project">
+                		→
+                	</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHAT I CAN BUILD -->
+        <section class="build-section" id="services">
+        	<div class="build-section__container">
+
+        		<div class="build-section__intro">
+        			<p class="build-section__eyebrow">What I Can Build</p>
+
+        			<h2>
+        				Websites for every
+        				<span>type of business.</span>
+        			</h2>
+
+        			<p>
+        				Whether you are launching something new or improving an existing online presence, I can create a website shaped around your business, audience, and goals.
+        			</p>
+        		</div>
+
+        		<div class="build-section__grid">
+        			<article class="build-item">
+        				<div class="build-item__icon" aria-hidden="true">
+        					<svg viewBox="0 0 48 48">
+        						<path d="M8 20h32v20H8z"></path>
+        						<path d="M5 20l5-10h28l5 10"></path>
+        						<path d="M17 40V28h10v12"></path>
+        						<path d="M5 20c0 4 6 4 6 0 0 4 6 4 6 0 0 4 6 4 6 0 0 4 6 4 6 0 0 4 6 4 6 0"></path>
+        					</svg>
+        				</div>
+
+        				<div>
+        					<h3>Small Business Websites</h3>
+        					<p>
+        						Professional websites that help local and growing businesses establish a strong online presence.
+        					</p>
+        				</div>
+        			</article>
+
+        			<article class="build-item">
+        				<div class="build-item__icon" aria-hidden="true">
+        					<svg viewBox="0 0 48 48">
+        						<path d="M14 6v36"></path>
+        						<path d="M8 6v12c0 5 12 5 12 0V6"></path>
+        						<path d="M33 6v36"></path>
+        						<path d="M29 6c0 11 0 16 8 18V6"></path>
+        					</svg>
+        				</div>
+
+        				<div>
+        					<h3>Restaurant Websites</h3>
+        					<p>
+        						Menu, location, hours, gallery, and contact information presented in a welcoming format.
+        					</p>
+        				</div>
+        			</article>
+
+        			<article class="build-item">
+        				<div class="build-item__icon" aria-hidden="true">
+        					<svg viewBox="0 0 48 48">
+        						<rect x="10" y="5" width="28" height="38" rx="2"></rect>
+        						<path d="M16 12h16"></path>
+        						<path d="M16 20h5M27 20h5M16 27h5M27 27h5M16 34h5M27 34h5"></path>
+        					</svg>
+        				</div>
+
+        				<div>
+        					<h3>Accounting & Bookkeeping</h3>
+        					<p>
+        						Clear, trustworthy websites designed for financial professionals and service-based firms.
+        					</p>
+        				</div>
+        			</article>
+
+        			<article class="build-item">
+        				<div class="build-item__icon" aria-hidden="true">
+        					<svg viewBox="0 0 48 48">
+        						<path d="M9 39l14-14"></path>
+        						<path d="M27 21l12-12"></path>
+        						<path d="M31 5l12 12"></path>
+        						<path d="M5 31l12 12"></path>
+        						<path d="M18 10l20 28"></path>
+        						<path d="M11 7l8 2-5 5z"></path>
+        					</svg>
+        				</div>
+
+        				<div>
+        					<h3>Contractors & Trades</h3>
+        					<p>
+        						Service-focused websites that showcase experience, project work, and ways to request an estimate.
+        					</p>
+        				</div>
+        			</article>
+
+        			<article class="build-item">
+        				<div class="build-item__icon" aria-hidden="true">
+        					<svg viewBox="0 0 48 48">
+        						<path d="M24 42c10-7 15-15 15-23 0-6-4-11-10-11-3 0-5 2-5 5 0-3-2-5-5-5-6 0-10 5-10 11 0 8 5 16 15 23z"></path>
+        						<path d="M13 28c7 0 12-5 12-12"></path>
+        						<path d="M35 28c-7 0-12-5-12-12"></path>
+        					</svg>
+        				</div>
+
+        				<div>
+        					<h3>Salons & Beauty Services</h3>
+        					<p>
+        						Stylish websites for salons, stylists, spas, and beauty professionals.
+        					</p>
+        				</div>
+        			</article>
+
+        			<article class="build-item">
+        				<div class="build-item__icon" aria-hidden="true">
+        					<svg viewBox="0 0 48 48">
+        						<path d="M24 42s-16-9-16-21c0-6 4-10 10-10 4 0 6 2 6 5 0-3 2-5 6-5 6 0 10 4 10 10 0 12-16 21-16 21z"></path>
+        						<path d="M24 7v20"></path>
+        						<path d="M17 14h14"></path>
+        					</svg>
+        				</div>
+
+        				<div>
+        					<h3>Churches & Nonprofits</h3>
+        					<p>
+        						Mission-focused websites for organizations, ministries, community groups, and causes.
+        					</p>
+        				</div>
+        			</article>
+
+        			<article class="build-item">
+        				<div class="build-item__icon" aria-hidden="true">
+        					<svg viewBox="0 0 48 48">
+        						<path d="M6 24L42 7 30 42 23 27z"></path>
+        						<path d="M23 27L42 7"></path>
+        					</svg>
+        				</div>
+
+        				<div>
+        					<h3>Landing Pages</h3>
+        					<p>
+        						Focused pages created for services, campaigns, promotions, events, and product launches.
+        					</p>
+        				</div>
+        			</article>
+
+        			<article class="build-item">
+        				<div class="build-item__icon" aria-hidden="true">
+        					<svg viewBox="0 0 48 48">
+        						<circle cx="24" cy="16" r="8"></circle>
+        						<path d="M8 42c2-10 8-15 16-15s14 5 16 15"></path>
+        					</svg>
+        				</div>
+
+        				<div>
+        					<h3>Portfolio & Personal Websites</h3>
+        					<p>
+        						Custom sites for creatives, professionals, personal brands, and independent projects.
+        					</p>
+        				</div>
+        			</article>
+        		</div>
+        	</div>
+        </section>
+
+        <!-- DESIGN CONCEPTS -->
+        <section class="concept-designs" id="concept-designs">
+        	<div class="concept-designs__inner">
+
+        		<div class="concept-designs__header">
+        			<p class="section-eyebrow">Concept Designs</p>
+
+        			<h2>Imagine What’s Possible</h2>
+        			<p class="concept-designs__intro">
+        				These original website concepts explore how thoughtful design can give different businesses a distinct and professional online presence.
+        			</p>
+        		</div>
+
+        		<div class="concept-grid">
+        			<article class="concept-card concept-card--renovation">
+        				<div class="concept-card__visual">
+        					<span class="concept-card__status">In Development</span>
+
+        					<div class="concept-card__placeholder">
+        						<span class="concept-card__number">01</span>
+        						<p>Modern Remodel</p>
+        					</div>
+        				</div>
+
+        				<div class="concept-card__content">
+        					<h3>Home Renovation</h3>
+        					<p>Bold, modern, and built around premium craftsmanship.</p>
+
+        					<div class="concept-card__release">
+        						<span>Target Release</span>
+        						<strong>August 2026</strong>
+        					</div>
+        				</div>
+        			</article>
+
+        			<article class="concept-card concept-card--landscaping">
+        				<div class="concept-card__visual">
+        					<span class="concept-card__status">In Development</span>
+
+        					<div class="concept-card__placeholder">
+        						<span class="concept-card__number">02</span>
+        						<p>Outdoor Living</p>
+        					</div>
+        				</div>
+
+        				<div class="concept-card__content">
+        					<h3>Landscaping &amp; Gardening</h3>
+        					<p>Fresh, natural, and designed to feel welcoming.</p>
+
+        					<div class="concept-card__release">
+        						<span>Target Release</span>
+        						<strong>September 2026</strong>
+        					</div>
+        				</div>
+        			</article>
+
+        			<article class="concept-card concept-card--detailing">
+        				<div class="concept-card__visual">
+        					<span class="concept-card__status">In Development</span>
+
+        					<div class="concept-card__placeholder">
+        						<span class="concept-card__number">03</span>
+        						<p>Premium Finish</p>
+        					</div>
+        				</div>
+
+        				<div class="concept-card__content">
+        					<h3>Auto Detailing</h3>
+        					<p>Sleek, dramatic, and focused on high-end presentation.</p>
+
+        					<div class="concept-card__release">
+        						<span>Target Release</span>
+        						<strong>October 2026</strong>
+        					</div>
+        				</div>
+        			</article>
+
+        			<article class="concept-card concept-card--grooming">
+        				<div class="concept-card__visual">
+        					<span class="concept-card__status">In Development</span>
+
+        					<div class="concept-card__placeholder">
+        						<span class="concept-card__number">04</span>
+        						<p>Mobile Pet Care</p>
+        					</div>
+        				</div>
+
+        				<div class="concept-card__content">
+        					<h3>Mobile Dog Grooming</h3>
+        					<p>Friendly, colorful, and approachable for pet owners.</p>
+
+        					<div class="concept-card__release">
+        						<span>Target Release</span>
+        						<strong>November 2026</strong>
+        					</div>
+        				</div>
+        			</article>
+        		</div>
+
+        		<div class="concept-designs__footer">
+        			<p>
+        				These concept designs are created to showcase original ideas and possibilities for different businesses.
+        			</p>
+
+        			<a href="#" class="concept-designs__link">
+        				View All Work
+        				<span aria-hidden="true">→</span>
+        			</a>
+        		</div>
+        	</div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="project-cta" id="contact">
+        	<div class="project-cta__inner">
+
+        		<div class="project-cta__icon" aria-hidden="true">
+        			<svg viewBox="0 0 64 64" role="img" focusable="false">
+        				<path d="M14 22 24 10h16l10 12-18 30L14 22Z"></path>
+        				<path d="M14 22h36"></path>
+        				<path d="m24 10 8 12 8-12"></path>
+        				<path d="m24 10-3 12 11 30"></path>
+        				<path d="m40 10 3 12-11 30"></path>
+        			</svg>
+        		</div>
+
+        		<div class="project-cta__heading">
+        			<p class="project-cta__eyebrow">Ready to Begin?</p>
+
+        			<h2>
+        				Let’s create something
+        				<span>exceptional together.</span>
+        			</h2>
+        		</div>
+
+        		<div class="project-cta__action">
+        			<p>
+        				Whether you’re launching something new or refreshing your current website, let’s bring your vision to life.
+        			</p>
+
+        			<a href="contact.html" class="project-cta__button">
+        				Start Your Project
+        				<span aria-hidden="true">→</span>
+        			</a>
+        		</div>
+        	</div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+    	<div class="footer-inner">
+
+    		<!-- Brand -->
+    		<div class="footer-brand">
+    			<a href="index.html" class="footer-logo-link" aria-label="DM Creative Solutions home">
+    				<img src="images/dmcs-logo.png" alt="DM Creative Solutions" class="footer-logo">
+    			</a>
+
+    			<p class="footer-description">
+    				Thoughtfully designed websites that help businesses build trust and grow online.
+    			</p>
+    		</div>
+
+    		<!-- Explore -->
+    		<div class="footer-column">
+    			<h2 class="footer-heading">Explore</h2>
+
+    			<nav aria-label="Footer navigation">
+    				<ul class="footer-links">
+    					<li><a href="index.html">Home</a></li>
+    					<li><a href="#about">About</a></li>
+    					<li><a href="#selected-work">Portfolio</a></li>
+    					<li><a href="#">Pricing</a></li>
+    				</ul>
+    			</nav>
+    		</div>
+
+    		<!-- Services -->
+    		<div class="footer-column">
+    			<h2 class="footer-heading">Services</h2>
+
+    			<ul class="footer-links">
+    				<li><a href="#">Custom Websites</a></li>
+    				<li><a href="#">Landing Pages</a></li>
+    				<li><a href="#">Website Redesigns</a></li>
+    				<li><a href="#">Portfolio Websites</a></li>
+    			</ul>
+    		</div>
+
+    		<!-- Contact and Socials -->
+    		<div class="footer-column footer-connect">
+    			<h2 class="footer-heading">Let’s Connect</h2>
+
+    			<address class="footer-contact">
+    				<a href="tel:+12153953937">
+    					<span class="footer-icon" aria-hidden="true">☎</span>
+    					<span>(215) 395-3937</span>
+    				</a>
+
+    				<a href="mailto:dmcreativesolutions.tech@gmail.com">
+    					<span class="footer-icon" aria-hidden="true">✉</span>
+    					<span>dmcreativesolutions.tech@gmail.com</span>
+    				</a>
+    			</address>
+
+    			<div class="footer-socials" aria-label="Social media links">
+    				<a href="https://www.instagram.com/dmcs.portfolio/" target="_blank" rel="noopener noreferrer">
+    					Instagram
+    				</a>
+
+    				<a href="https://www.linkedin.com/company/111309372/admin/dashboard/" target="_blank" rel="noopener noreferrer">
+    					LinkedIn
+    				</a>
+
+    				<a href="https://www.facebook.com/profile.php?id=61592270664121" target="_blank" rel="noopener noreferrer">
+    					Facebook
+    				</a>
+    			</div>
+    		</div>
+    	</div>
+
+    	<div class="footer-bottom">
+    		<p>&copy; 2026 DM Creative Solutions. All rights reserved.</p>
+
+    		<div class="footer-legal">
+    			<a href="#">Privacy Policy</a>
+    			<a href="#">Terms &amp; Conditions</a>
+    		</div>
+    	</div>
+    </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>
