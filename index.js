@@ -12,7 +12,7 @@ const projects = [
             "Gallery",
             "Contact Form"
         ],
-        image: "images/TovanasDiner.png",
+        image: "https://i.postimg.cc/DzNHvdFz/tovanas-restaurant.webp",
         alt: "Tovana's Restaurant website",
         url: "#"
     },
@@ -29,7 +29,7 @@ const projects = [
             "Gentle Visual Design",
             "Accessible Structure"
         ],
-        image: "images/PetProject.png",
+        image: "https://i.postimg.cc/XqZYGkZh/Pet-Project.webp",
         alt: "Pet Tribute memorial website",
         url: "https://preeminent-buttercream-5f1d8f.netlify.app/"
     },
@@ -46,7 +46,7 @@ const projects = [
             "Smooth Scrolling",
             "Image Optimization"
         ],
-        image: "images/dream-vacation.webp",
+        image: "https://i.postimg.cc/MG2CSbby/Dream-Vacation.webp",
         alt: "Dream Vacation travel landing page",
         url: "https://vocal-centaur-04f237.netlify.app/"
     },
@@ -63,7 +63,7 @@ const projects = [
             "Search Functionality",
             "Clean Design"
         ],
-        image: "images/forecast.webp",
+        image: "https://i.postimg.cc/8CQ2SBBv/Forecast.webp",
         alt: "Forecast weather application",
         url: "https://dm-forecast-app.netlify.app/"
     },
@@ -80,7 +80,7 @@ const projects = [
             "Responsive Design",
             "Smooth Transitions"
         ],
-        image: "images/on-repeat.webp",
+        image: "https://i.postimg.cc/GpwWCJJY/On-Repeat.webp",
         alt: "On Repeat music experience",
         url: "https://on-repeat.netlify.app/"
     }
