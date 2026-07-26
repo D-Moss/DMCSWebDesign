@@ -41,6 +41,18 @@ a {
 	text-decoration: none;
 }
 
+/* ===== SHARED SECTION CONTAINER ===== */
+.section-shell {
+	width: min(1180px, calc(100% - 48px));
+	margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+	.section-shell {
+		width: min(100% - 36px, 1180px);
+	}
+}
+
 /*NAVIGATION BAR*/
 .site-header {
 	background: var(--gray);
@@ -245,9 +257,7 @@ a {
 	gap: clamp(50px, 6vw, 96px);
 }
 
-
 /* ======= HERO COPY ======= */
-
 .hero__content {
 	position: relative;
 	z-index: 3;
@@ -302,9 +312,7 @@ a {
 	gap: 28px;
 }
 
-
 /* ======= HERO BUTTON ======= */
-
 .button {
 	display: inline-flex;
 	align-items: center;
@@ -346,9 +354,7 @@ a {
 	transform: translateX(4px);
 }
 
-
 /* ======= SCROLL LINK ======= */
-
 .hero__scroll-link {
 	display: inline-flex;
 	align-items: center;
@@ -370,9 +376,7 @@ a {
 	transform: translateY(4px);
 }
 
-
 /* ======= FLOWING BACKGROUND LINES ======= */
-
 .hero__flow-lines {
 	position: absolute;
 	z-index: 1;
@@ -439,9 +443,7 @@ a {
 	transform: rotate(1deg);
 }
 
-
 /* ======= BROWSER WINDOW ======= */
-
 .hero__visual {
 	position: relative;
 	z-index: 2;
@@ -507,9 +509,7 @@ a {
 	gap: 28px;
 }
 
-
 /* ======= FEATURED PROJECT ======= */
-
 .portfolio-intro h2 {
 	color: #10172d;
 	font-family: "Playfair Display", serif;
@@ -594,9 +594,7 @@ a {
 	font-size: 0.68rem;
 }
 
-
 /* ======= WHAT I DO SIDEBAR ======= */
-
 .portfolio-sidebar {
 	padding-left: 25px;
 	border-left: 1px solid rgba(7, 17, 47, 0.1);
@@ -661,9 +659,7 @@ a {
 	transform: rotate(-5deg);
 }
 
-
 /* ======= FOUR EQUAL THUMBNAILS ======= */
-
 .project-thumbnails {
 	display: grid;
 	padding: 0 28px 30px;
@@ -708,19 +704,15 @@ a {
 	line-height: 1.3;
 }
 
-
 /* ======= RESPONSIVE HERO ======= */
-
 @media (max-width: 1200px) {
 	.hero__container {
 		grid-template-columns: minmax(300px, 0.75fr) minmax(570px, 1.25fr);
 		gap: 48px;
 	}
-
 	.portfolio-browser__body {
 		grid-template-columns: minmax(0, 1fr) 165px;
 	}
-
 	.portfolio-sidebar {
 		padding-left: 20px;
 	}
@@ -730,30 +722,24 @@ a {
 	.hero {
 		padding-top: 80px;
 	}
-
 	.hero__container {
 		grid-template-columns: 1fr;
 	}
-
 	.hero__content {
 		max-width: 700px;
 		text-align: center;
 	}
-
 	.hero__description {
 		margin-right: auto;
 		margin-left: auto;
 	}
-
 	.hero__actions {
 		justify-content: center;
 	}
-
 	.hero__accent-line {
 		margin-right: auto;
 		margin-left: auto;
 	}
-
 	.hero__visual {
 		width: min(100%, 850px);
 		margin: 20px auto 0;
@@ -765,28 +751,22 @@ a {
 		min-height: auto;
 		padding: 65px 18px 75px;
 	}
-
 	.hero__title {
 		font-size: clamp(3rem, 14vw, 4.4rem);
 	}
-
 	.hero__actions {
 		flex-direction: column;
 	}
-
 	.button--primary {
 		width: min(100%, 280px);
 	}
-
 	.portfolio-browser__topline span:last-child {
 		display: none;
 	}
-
 	.portfolio-browser__body {
 		padding: 22px 18px 16px;
 		grid-template-columns: 1fr;
 	}
-
 	.portfolio-sidebar {
 		display: grid;
 		padding: 20px 0 0;
@@ -795,23 +775,19 @@ a {
 		grid-template-columns: 1fr 1fr;
 		gap: 24px;
 	}
-
 	.portfolio-sidebar__approach {
 		margin-top: 0;
 		padding-top: 0;
 		border-top: 0;
 	}
-
 	.project-thumbnails {
 		padding: 0 18px 24px;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 		gap: 18px 12px;
 	}
-
 	.featured-project__image {
 		height: 270px;
 	}
-
 	.hero__flow-lines {
 		left: -360px;
 	}
@@ -821,36 +797,28 @@ a {
 	.hero__title {
 		font-size: 3rem;
 	}
-
 	.portfolio-sidebar {
 		grid-template-columns: 1fr;
 	}
-
 	.featured-project__image {
 		height: 225px;
 	}
-
 	.featured-project__overlay {
 		left: 18px;
 	}
-
 	.project-thumbnails {
 		grid-template-columns: 1fr 1fr;
 	}
-
 	.project-thumbnail h3 {
 		font-size: 0.62rem;
 	}
 }
 
-
 /* ======= REDUCED MOTION ======= */
-
 @media (prefers-reduced-motion: reduce) {
 	html {
 		scroll-behavior: auto;
 	}
-
 	.button--primary,
 	.button--primary span,
 	.hero__scroll-arrow {
@@ -860,15 +828,15 @@ a {
 
 /* ===== ABOUT ME =====*/
 .meet-designer {  
-    padding: 36px 0;  
+    padding: 42px 0;  
     background-color: var(--gray);
     border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee; 
+    border-bottom: 1px solid #eee;
 }
 
 .strip-bio {
 	display: grid;
-	grid-template-columns: 230px 1fr;
+	grid-template-columns: 230px minmax(0, 1fr);
 	align-items: center;
 	gap: 44px;
 }
@@ -881,10 +849,6 @@ a {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	display: block;
-}
-
-.meet-designer .section-shell {
-	max-width: 900px;
 }
 
 .meet-designer p {
@@ -2077,7 +2041,6 @@ a {
 }
 
 /* Individual placeholder directions */
-
 .concept-card--renovation .concept-card__visual {
     background:
         linear-gradient(rgba(11, 42, 74, 0.15), rgba(11, 42, 74, 0.55)),
@@ -2189,12 +2152,10 @@ a {
 /* =========================
    Responsive
 ========================= */
-
 @media (max-width: 1000px) {
     .concept-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
     .concept-card__content > p {
         min-height: auto;
     }
@@ -2204,19 +2165,15 @@ a {
     .concept-designs {
         padding: 5rem 1rem;
     }
-
     .concept-designs__header {
         margin-bottom: 2rem;
     }
-
     .concept-grid {
         grid-template-columns: 1fr;
     }
-
     .concept-card__visual {
         min-height: 240px;
     }
-
     .concept-designs__footer {
         align-items: flex-start;
         flex-direction: column;
@@ -2227,7 +2184,6 @@ a {
 /* =========================
    Project CTA
 ========================= */
-
 .project-cta {
     position: relative;
     overflow: hidden;
@@ -2390,7 +2346,6 @@ a {
 /* =========================
    Responsive
 ========================= */
-
 @media (max-width: 900px) {
     .project-cta__inner {
         grid-template-columns: auto 1fr;
@@ -2432,24 +2387,27 @@ a {
 /* ========================================
    FOOTER
 ======================================== */
-
 .site-footer {
-  position: relative;
-  overflow: hidden;
-  background: var(--navy);
-    color: #ffffff;
-  font-family: "Inter", sans-serif;
+	position: relative;
+	overflow: hidden;
+	background: var(--navy);
+	color: #ffffff;
+	font-family: "Inter", sans-serif;
 }
 
 .footer-inner {
-  width: min(1160px, calc(100% - 48px));
-  margin: 0 auto;
-  padding: 64px 0 48px;
+	width: min(1160px, calc(100% - 48px));
+	margin: 0 auto;
+	padding: 64px 0 48px;
 
-  display: grid;
-  grid-template-columns: 1.45fr 0.8fr 1fr 1.25fr;
-  gap: 48px;
-  align-items: start;
+	display: grid;
+	grid-template-columns:
+		minmax(220px, 1.2fr)
+		minmax(110px, 0.65fr)
+		minmax(150px, 0.85fr)
+		minmax(320px, 1.5fr);
+	gap: 36px;
+	align-items: start;
 }
 
 .footer-brand {
