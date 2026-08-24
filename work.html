@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="description" content="DM Creative Solutions designs and develops custom, responsive websites that help businesses build trust, stand out, and grow online.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" type="text/css" href="work.css">
+	<title>Portfolio | DM Creative Solutions</title>
+</head>
+<body>
+	<!-- NAVIGATION BAR -->
+	<header class="site-header">
+		<nav class="site-nav" aria-label="Primary navigation">
+			<a href="index.html" class="site-logo" aria-label="DM Creative Solutions home">
+				<img src="https://i.postimg.cc/ZR7CqbCG/Logo.png" alt="DM Creative Solutions logo">
+				<span class="site-logo__text">DM Creative Solutions</span>
+			</a>
+
+			<button class="site-nav__toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="primary-menu">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+
+			<div class="site-nav__menu" id="primary-menu">
+				<ul class="site-nav__links" role="list">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html#about">About</a></li>
+					<li><a href="work.html">Work</a></li>
+					<li><a href="index.html#services">Services</a></li>
+					<li><a href="pricing.html">Pricing</a></li>
+					<li><a href="index.html#contact">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+		<section class="work-hero">
+			<div class="work-hero__inner">
+
+				<div class="work-hero__content">
+					<p class="section-eyebrow">Portfolio</p>
+
+					<h1>
+						Work that speaks for
+						<span>itself.</span>
+					</h1>
+
+					<p class="work-hero__intro">
+						A collection of custom websites, web applications, and original concepts built with clean code, thoughtful design, and a focus on results.
+					</p>
+
+					<div class="work-hero__skills">
+						<div class="work-hero__skill">
+							<span class="work-hero__skill-icon">&lt;/&gt;</span>
+							<span>HTML / CSS / JavaScript</span>
+						</div>
+
+						<div class="work-hero__skill">
+							<span class="work-hero__skill-icon">▣</span>
+							<span>Responsive Design</span>
+						</div>
+
+						<div class="work-hero__skill">
+							<span class="work-hero__skill-icon">◇</span>
+							<span>UI / UX Focused</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="work-hero__visual">
+
+					<div class="work-hero__laptop">
+						<div class="work-hero__screen">
+							<img
+							src="https://i.postimg.cc/DzNHvdFz/tovanas-restaurant.webp"
+							alt="Tovana's Restaurant website displayed on a laptop">
+						</div>
+					</div>
+
+					<div class="work-hero__phone">
+						<div class="work-hero__phone-screen">
+							<img
+							src="https://i.postimg.cc/DzNHvdFz/tovanas-restaurant.webp"
+							alt="">
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		<section class="portfolio-section" id="selected-work">
+			<div class="portfolio-section__inner">
+
+				<div class="portfolio-toolbar">
+					<div class="portfolio-filters" aria-label="Filter portfolio projects">
+						<button class="portfolio-filter is-active" type="button" data-filter="all">
+							All Projects
+						</button>
+
+						<button class="portfolio-filter" type="button" data-filter="website">
+							Websites
+						</button>
+
+						<button class="portfolio-filter" type="button" data-filter="application">
+							Web Applications
+						</button>
+
+						<button class="portfolio-filter" type="button" data-filter="concept">
+							Concept Designs
+						</button>
+					</div>
+
+					<div class="portfolio-sort">
+						<label for="portfolio-sort" class="sr-only">Sort projects</label>
+
+						<select id="portfolio-sort">
+							<option value="newest">Newest First</option>
+							<option value="oldest">Oldest First</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="portfolio-heading">
+					<p class="section-eyebrow">All Projects</p>
+					<h2>Explore the Work</h2>
+				</div>
+
+				<div class="portfolio-grid" id="portfolio-grid">
+
+					<article class="portfolio-card" data-category="website">
+						<div class="portfolio-card__browser">
+							<div class="portfolio-card__browser-bar" aria-hidden="true">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+
+							<div class="portfolio-card__image">
+								<img
+								src="https://i.postimg.cc/DzNHvdFz/tovanas-restaurant.webp"
+								alt="Tovana's Restaurant website">
+							</div>
+						</div>
+
+						<div class="portfolio-card__content">
+							<p class="portfolio-card__type">Restaurant Website</p>
+
+							<h3>Tovana’s Restaurant</h3>
+
+							<p class="portfolio-card__description">
+								A warm, inviting restaurant website designed to make menu details, hours, location information, and contact options easy to find.
+							</p>
+
+							<div class="portfolio-card__tags">
+								<span>HTML</span>
+								<span>CSS</span>
+								<span>JavaScript</span>
+							</div>
+
+							<a href="#" class="portfolio-card__link">
+								View Project
+								<span aria-hidden="true">→</span>
+							</a>
+						</div>
+					</article>
+
+					<article class="portfolio-card" data-category="website">
+						<div class="portfolio-card__browser">
+							<div class="portfolio-card__browser-bar" aria-hidden="true">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+
+							<div class="portfolio-card__image">
+								<img
+								src="https://i.postimg.cc/MG2CSbby/Dream-Vacation.webp"
+								alt="Dream Vacation travel landing page">
+							</div>
+						</div>
+
+						<div class="portfolio-card__content">
+							<p class="portfolio-card__type">Travel Landing Page</p>
+
+							<h3>Dream Vacation</h3>
+
+							<p class="portfolio-card__description">
+								An immersive travel landing page created to inspire visitors, highlight destinations, and lead them toward a clear call to action.
+							</p>
+
+							<div class="portfolio-card__tags">
+								<span>HTML</span>
+								<span>CSS</span>
+								<span>JavaScript</span>
+							</div>
+
+							<a href="https://vocal-centaur-04f237.netlify.app/" class="portfolio-card__link" target="_blank" rel="noopener">
+								View Project
+								<span aria-hidden="true">→</span>
+							</a>
+						</div>
+					</article>
+
+					<article class="portfolio-card" data-category="application">
+						<div class="portfolio-card__browser">
+							<div class="portfolio-card__browser-bar" aria-hidden="true">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+
+							<div class="portfolio-card__image">
+								<img
+								src="https://i.postimg.cc/8CQ2SBBv/Forecast.webp"
+								alt="Forecast weather application">
+							</div>
+						</div>
+
+						<div class="portfolio-card__content">
+							<p class="portfolio-card__type">Weather Application</p>
+
+							<h3>Forecast</h3>
+
+							<p class="portfolio-card__description">
+								A clean weather application that presents real-time conditions and forecast data in a polished, easy-to-scan interface.
+							</p>
+
+							<div class="portfolio-card__tags">
+								<span>HTML</span>
+								<span>CSS</span>
+								<span>JavaScript</span>
+								<span>API</span>
+							</div>
+
+							<a href="https://dm-forecast-app.netlify.app/" class="portfolio-card__link" target="_blank" rel="noopener">
+								View Project
+								<span aria-hidden="true">→</span>
+							</a>
+						</div>
+					</article>
+
+					<article class="portfolio-card" data-category="website">
+						<div class="portfolio-card__browser">
+							<div class="portfolio-card__browser-bar" aria-hidden="true">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+
+							<div class="portfolio-card__image">
+								<img
+								src="https://i.postimg.cc/GpwWCJJY/On-Repeat.webp"
+								alt="On Repeat music experience">
+							</div>
+						</div>
+
+						<div class="portfolio-card__content">
+							<p class="portfolio-card__type">Music Experience</p>
+
+							<h3>On Repeat</h3>
+
+							<p class="portfolio-card__description">
+								A personal music experience with a dark editorial direction, interactive chapters, and a strong visual atmosphere.
+							</p>
+
+							<div class="portfolio-card__tags">
+								<span>HTML</span>
+								<span>CSS</span>
+								<span>JavaScript</span>
+							</div>
+
+							<a href="https://on-repeat.netlify.app/" class="portfolio-card__link" target="_blank" rel="noopener">
+								View Project
+								<span aria-hidden="true">→</span>
+							</a>
+						</div>
+					</article>
+
+					<article class="portfolio-card" data-category="website">
+						<div class="portfolio-card__browser">
+							<div class="portfolio-card__browser-bar" aria-hidden="true">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+
+							<div class="portfolio-card__image">
+								<img
+								src="https://i.postimg.cc/XqZYGkZh/Pet-Project.webp"
+								alt="Pet Tribute memorial website">
+							</div>
+						</div>
+
+						<div class="portfolio-card__content">
+							<p class="portfolio-card__type">Tribute Website</p>
+
+							<h3>Pet Tribute</h3>
+
+							<p class="portfolio-card__description">
+								A heartfelt memorial website designed to celebrate a beloved pet through photographs, stories, and meaningful details.
+							</p>
+
+							<div class="portfolio-card__tags">
+								<span>HTML</span>
+								<span>CSS</span>
+								<span>JavaScript</span>
+							</div>
+
+							<a href="https://preeminent-buttercream-5f1d8f.netlify.app/" class="portfolio-card__link" target="_blank" rel="noopener">
+								View Project
+								<span aria-hidden="true">→</span>
+							</a>
+						</div>
+					</article>
+
+					<article class="portfolio-card portfolio-card--placeholder" data-category="website">
+						<div class="portfolio-card__placeholder">
+							<span>Project Preview</span>
+						</div>
+
+						<div class="portfolio-card__content">
+							<p class="portfolio-card__type">Website Project</p>
+
+							<h3>Project Name</h3>
+
+							<p class="portfolio-card__description">
+								Additional project information will be added here.
+							</p>
+
+							<div class="portfolio-card__tags">
+								<span>HTML</span>
+								<span>CSS</span>
+								<span>JavaScript</span>
+							</div>
+
+							<span class="portfolio-card__link portfolio-card__link--disabled">
+								Coming Soon
+							</span>
+						</div>
+					</article>
+
+				</div>
+
+				<nav class="portfolio-pagination" aria-label="Portfolio pages">
+					<button class="portfolio-pagination__arrow" type="button" aria-label="Previous page">
+						←
+					</button>
+
+					<button class="portfolio-pagination__page is-active" type="button" aria-current="page">
+						1
+					</button>
+
+					<button class="portfolio-pagination__page" type="button">
+						2
+					</button>
+
+					<button class="portfolio-pagination__page" type="button">
+						3
+					</button>
+
+					<button class="portfolio-pagination__arrow" type="button" aria-label="Next page">
+						→
+					</button>
+				</nav>
+
+			</div>
+		</section>
+
+		<!-- CONCEPT DESIGNS -->
+		<section class="portfolio-concepts" id="concept-designs">
+			<div class="portfolio-concepts__inner">
+
+				<div class="portfolio-concepts__intro">
+					<p class="section-eyebrow">Original Concept Designs</p>
+
+					<h2>
+						Imagine What’s
+						<span>Possible</span>
+					</h2>
+
+					<p>
+						Original website concepts created to explore how different industries, audiences, and visual directions can shape a distinct online presence.
+					</p>
+				</div>
+
+				<div class="concept-carousel">
+
+					<button class="concept-carousel__arrow concept-carousel__arrow--previous" type="button" aria-label="Show previous concept designs">
+						←
+					</button>
+
+					<div class="concept-carousel__viewport">
+						<div class="concept-carousel__track">
+
+							<article class="portfolio-concept-card concept-card--renovation">
+								<div class="portfolio-concept-card__visual">
+									<span class="portfolio-concept-card__status">
+										In Development
+									</span>
+
+									<div class="portfolio-concept-card__visual-copy">
+										<span>01</span>
+										<p>Modern Remodel</p>
+									</div>
+								</div>
+
+								<div class="portfolio-concept-card__content">
+									<p class="portfolio-concept-card__type">
+										Home Services
+									</p>
+
+									<h3>Home Renovation</h3>
+
+									<p>
+										Bold, modern, and built around premium craftsmanship.
+									</p>
+								</div>
+							</article>
+
+							<article class="portfolio-concept-card concept-card--landscaping">
+								<div class="portfolio-concept-card__visual">
+									<span class="portfolio-concept-card__status">
+										In Development
+									</span>
+
+									<div class="portfolio-concept-card__visual-copy">
+										<span>02</span>
+										<p>Outdoor Living</p>
+									</div>
+								</div>
+
+								<div class="portfolio-concept-card__content">
+									<p class="portfolio-concept-card__type">
+										Outdoor Services
+									</p>
+
+									<h3>Landscaping &amp; Gardening</h3>
+
+									<p>
+										Fresh, natural, and designed to feel welcoming.
+									</p>
+								</div>
+							</article>
+
+							<article class="portfolio-concept-card concept-card--detailing">
+								<div class="portfolio-concept-card__visual">
+									<span class="portfolio-concept-card__status">
+										In Development
+									</span>
+
+									<div class="portfolio-concept-card__visual-copy">
+										<span>03</span>
+										<p>Premium Finish</p>
+									</div>
+								</div>
+
+								<div class="portfolio-concept-card__content">
+									<p class="portfolio-concept-card__type">
+										Automotive
+									</p>
+
+									<h3>Auto Detailing</h3>
+
+									<p>
+										Sleek, dramatic, and focused on high-end presentation.
+									</p>
+								</div>
+							</article>
+
+							<article class="portfolio-concept-card concept-card--grooming">
+								<div class="portfolio-concept-card__visual">
+									<span class="portfolio-concept-card__status">
+										In Development
+									</span>
+
+									<div class="portfolio-concept-card__visual-copy">
+										<span>04</span>
+										<p>Mobile Pet Care</p>
+									</div>
+								</div>
+
+								<div class="portfolio-concept-card__content">
+									<p class="portfolio-concept-card__type">
+										Pet Services
+									</p>
+
+									<h3>Mobile Dog Grooming</h3>
+
+									<p>
+										Friendly, colorful, and approachable for pet owners.
+									</p>
+								</div>
+							</article>
+
+						</div>
+					</div>
+
+					<button class="concept-carousel__arrow concept-carousel__arrow--next" type="button" aria-label="Show next concept designs">
+						→
+					</button>
+
+				</div>
+
+				<div class="concept-carousel__footer">
+					<p class="concept-carousel__counter">
+						<span id="concept-current">01</span>
+						<span aria-hidden="true">/</span>
+						<span id="concept-total">04</span>
+					</p>
+
+					<p class="concept-carousel__note">
+						More concepts will be added as new design explorations are developed.
+					</p>
+				</div>
+
+			</div>
+		</section>
+		
+		<!-- CONTACT SECTION -->
+		<section class="project-cta" id="contact">
+			<div class="project-cta__inner">
+				<div class="project-cta__icon" aria-hidden="true">
+					<svg viewBox="0 0 64 64" role="img" focusable="false">
+						<path d="M14 22 24 10h16l10 12-18 30L14 22Z"></path>
+						<path d="M14 22h36"></path>
+						<path d="m24 10 8 12 8-12"></path>
+						<path d="m24 10-3 12 11 30"></path>
+						<path d="m40 10 3 12-11 30"></path>
+					</svg>
+				</div>
+
+				<div class="project-cta__heading">
+					<p class="project-cta__eyebrow">Ready to Begin?</p>
+
+					<h2>
+						Let’s create something
+						<span>exceptional together.</span>
+					</h2>
+				</div>
+
+				<div class="project-cta__action">
+					<p>
+						Whether you’re launching something new or refreshing your current website, let’s bring your vision to life.
+					</p>
+
+					<a href="contact.html" class="project-cta__button">
+						Start Your Project
+						<span aria-hidden="true">→</span>
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- FOOTER -->
+    <footer class="site-footer">
+    	<div class="footer-inner">
+
+    		<!-- Brand -->
+    		<div class="footer-brand">
+    			<a href="index.html" class="footer-logo-link" aria-label="DM Creative Solutions home">
+    				<img src="https://i.postimg.cc/ZR7CqbCG/Logo.png" alt="DM Creative Solutions" class="footer-logo">
+    			</a>
+
+    			<p class="footer-description">
+    				Thoughtfully designed websites that help businesses build trust and grow online.
+    			</p>
+    		</div>
+
+    		<!-- Explore -->
+    		<div class="footer-column">
+    			<h2 class="footer-heading">Explore</h2>
+
+    			<nav aria-label="Footer navigation">
+    				<ul class="footer-links">
+    					<li><a href="index.html">Home</a></li>
+    					<li><a href="#about">About</a></li>
+    					<li><a href="#selected-work">Portfolio</a></li>
+    					<li><a href="#">Pricing</a></li>
+    				</ul>
+    			</nav>
+    		</div>
+
+    		<!-- Services -->
+    		<div class="footer-column">
+    			<h2 class="footer-heading">Services</h2>
+
+    			<ul class="footer-links">
+    				<li><a href="#">Custom Websites</a></li>
+    				<li><a href="#">Landing Pages</a></li>
+    				<li><a href="#">Website Redesigns</a></li>
+    				<li><a href="#">Portfolio Websites</a></li>
+    			</ul>
+    		</div>
+
+    		<!-- Contact and Socials -->
+    		<div class="footer-column footer-connect">
+    			<h2 class="footer-heading">Let’s Connect</h2>
+
+    			<address class="footer-contact">
+    				<a href="tel:+12153953937">
+    					<span class="footer-icon" aria-hidden="true">☎</span>
+    					<span>(215) 395-3937</span>
+    				</a>
+
+    				<a href="mailto:dmcreativesolutions.tech@gmail.com" class="footer-email">
+    					<span class="footer-icon" aria-hidden="true">✉</span>
+    					<span>dmcreativesolutions.tech@gmail.com</span>
+    				</a>
+    			</address>
+
+    			<div class="footer-socials" aria-label="Social media links">
+    				<a href="https://www.instagram.com/dmcs.portfolio/" target="_blank" rel="noopener noreferrer">
+    					Instagram
+    				</a>
+
+    				<a href="https://www.linkedin.com/company/111309372/admin/dashboard/" target="_blank" rel="noopener noreferrer">
+    					LinkedIn
+    				</a>
+
+    				<a href="https://www.facebook.com/profile.php?id=61592270664121" target="_blank" rel="noopener noreferrer">
+    					Facebook
+    				</a>
+    			</div>
+    		</div>
+    	</div>
+
+    	<div class="footer-bottom">
+    		<p>&copy; 2026 DM Creative Solutions. All rights reserved.</p>
+
+    		<div class="footer-legal">
+    			<a href="#">Privacy Policy</a>
+    			<a href="#">Terms &amp; Conditions</a>
+    		</div>
+    	</div>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="work.js"></script>
+</body>
+</html>
