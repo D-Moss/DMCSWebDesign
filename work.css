@@ -1,4 +1,19 @@
-/* ===== WORK / PORTFOLIO PAGE ===== */
+/* ===== Accessibility ===== */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+
+
+/* ===== WORK HERO ===== */
 .work-hero {
 	position: relative;
 	overflow: hidden;
@@ -39,7 +54,7 @@
 		0 -48px 0 -47px rgba(231, 109, 170, 0.14);
 }
 
-/* Soft glow */
+/* Soft Glow */
 .work-hero::after {
 	top: 40px;
 	right: 5%;
@@ -61,7 +76,7 @@
 	gap: clamp(50px, 7vw, 95px);
 }
 
-/* ===== HERO CONTENT ===== */
+/* Hero Content */
 .work-hero__content {
 	max-width: 540px;
 }
@@ -98,7 +113,7 @@
 	line-height: 1.8;
 }
 
-/* ===== HERO SKILLS ===== */
+/* Hero Skills */
 .work-hero__skills {
 	display: flex;
 	margin-top: 34px;
@@ -130,7 +145,7 @@
 	box-shadow: 0 8px 22px rgba(0, 11, 117, 0.05);
 }
 
-/* ===== DEVICE VISUAL ===== */
+/* Device Visual */
 .work-hero__visual {
 	position: relative;
 	min-height: 430px;
@@ -243,6 +258,8 @@
 	object-position: center;
 }
 
+
+
 /* ===== PORTFOLIO PROJECTS ===== */
 .portfolio-section {
 	padding: clamp(70px, 8vw, 110px) 24px;
@@ -254,7 +271,7 @@
 	margin: 0 auto;
 }
 
-/* ===== TOOLBAR ===== */
+/* Toolbar */
 .portfolio-toolbar {
 	display: flex;
 	align-items: center;
@@ -298,7 +315,7 @@
 .portfolio-filter.is-active {
 	border-color: var(--creative);
 	background: var(--creative);
-	color: #ffffff;
+	color: var(--white);
 }
 
 .portfolio-sort select {
@@ -306,7 +323,7 @@
 	padding: 0 42px 0 16px;
 	border: 1px solid rgba(0, 11, 117, 0.1);
 	border-radius: 8px;
-	background: #ffffff;
+	background: var(--white);
 	color: var(--navy);
 	font-family: "Inter", sans-serif;
 	font-size: 0.78rem;
@@ -314,7 +331,7 @@
 	cursor: pointer;
 }
 
-/* ===== SECTION HEADING ===== */
+/* Section Heading */
 .portfolio-heading {
 	margin-bottom: 28px;
 }
@@ -329,7 +346,7 @@
 	line-height: 1.05;
 }
 
-/* ===== PROJECT GRID ===== */
+/* Project Grid */
 .portfolio-grid {
 	display: grid;
 	grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -342,7 +359,7 @@
 	flex-direction: column;
 	border: 1px solid rgba(0, 11, 117, 0.09);
 	border-radius: 12px;
-	background: #ffffff;
+	background: var(--white);
 	box-shadow: 0 16px 38px rgba(0, 11, 117, 0.07);
 	transition:
 		transform 220ms ease,
@@ -354,9 +371,9 @@
 	box-shadow: 0 24px 48px rgba(0, 11, 117, 0.12);
 }
 
-/* ===== CARD IMAGE ===== */
+/* Card Image */
 .portfolio-card__browser {
-	background: #ffffff;
+	background: var(--white);
 }
 
 .portfolio-card__browser-bar {
@@ -402,7 +419,7 @@
 	transform: scale(1.025);
 }
 
-/* ===== CARD CONTENT ===== */
+/* Card Content */
 .portfolio-card__content {
 	display: flex;
 	flex: 1;
@@ -470,28 +487,7 @@
 	transform: translateX(4px);
 }
 
-.portfolio-card__link--disabled {
-	color: #9295a2;
-	cursor: default;
-}
-
-/* ===== PLACEHOLDER CARD ===== */
-.portfolio-card__placeholder {
-	display: grid;
-	aspect-ratio: 16 / 9;
-	place-items: center;
-	background:
-		linear-gradient(
-			135deg,
-			rgba(250, 218, 221, 0.55),
-			rgba(244, 244, 244, 0.96)
-		);
-	color: rgba(0, 11, 117, 0.45);
-	font-family: "Playfair Display", serif;
-	font-size: 1.2rem;
-}
-
-/* ===== PAGINATION ===== */
+/* Pagination */
 .portfolio-pagination {
 	display: flex;
 	align-items: center;
@@ -508,7 +504,7 @@
 	place-items: center;
 	border: 1px solid rgba(0, 11, 117, 0.12);
 	border-radius: 7px;
-	background: #ffffff;
+	background: var(--white);
 	color: var(--navy);
 	font-family: "Inter", sans-serif;
 	font-size: 0.78rem;
@@ -528,225 +524,12 @@
 .portfolio-pagination__page.is-active {
 	border-color: var(--navy);
 	background: var(--navy);
-	color: #ffffff;
+	color: var(--white);
 }
 
-/* ===== SCREEN READER TEXT ===== */
-.sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	white-space: nowrap;
-	border: 0;
-}
 
-/* ===== TABLET ===== */
-@media (max-width: 900px) {
-	.portfolio-grid {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
 
-	.portfolio-toolbar {
-		align-items: flex-start;
-		flex-direction: column;
-	}
-
-	.portfolio-sort {
-		width: 100%;
-	}
-
-	.portfolio-sort select {
-		width: 100%;
-	}
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 600px) {
-	.portfolio-section {
-		padding: 60px 18px 72px;
-	}
-
-	.portfolio-filters {
-		display: grid;
-		width: 100%;
-		grid-template-columns: repeat(2, minmax(0, 1fr));
-	}
-
-	.portfolio-filter {
-		width: 100%;
-	}
-
-	.portfolio-grid {
-		grid-template-columns: 1fr;
-	}
-
-	.portfolio-card__content {
-		padding: 20px;
-	}
-}
-
-@media (max-width: 390px) {
-	.portfolio-filters {
-		grid-template-columns: 1fr;
-	}
-}
-
-/* ===== REDUCED MOTION ===== */
-@media (prefers-reduced-motion: reduce) {
-	.portfolio-card,
-	.portfolio-card__image img,
-	.portfolio-card__link span,
-	.portfolio-filter {
-		transition: none;
-	}
-}
-
-/* ===== HOVER DETAIL ===== */
-@media (hover: hover) and (pointer: fine) {
-	.work-hero__laptop {
-		transition:
-		transform 300ms ease,
-		box-shadow 300ms ease;
-	}
-
-	.work-hero__visual:hover .work-hero__laptop {
-		transform:
-			perspective(1000px)
-			rotateY(-2deg)
-			translateY(-4px);
-
-		box-shadow:
-			0 42px 80px rgba(7, 17, 47, 0.22),
-			0 10px 24px rgba(0, 0, 0, 0.14);
-	}
-}
-
-/* ===== TABLET ===== */
-@media (max-width: 950px) {
-	.work-hero {
-		padding-top: 80px;
-		padding-bottom: 90px;
-	}
-
-	.work-hero__inner {
-		grid-template-columns: 1fr;
-		gap: 55px;
-	}
-
-	.work-hero__content {
-		max-width: 720px;
-	}
-
-	.work-hero__visual {
-		width: min(100%, 760px);
-		margin: 0 auto;
-	}
-
-	.work-hero__laptop {
-		width: min(90%, 620px);
-	}
-
-	.work-hero__phone {
-		right: 6%;
-	}
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 650px) {
-	.work-hero {
-		padding: 62px 18px 74px;
-	}
-
-	.work-hero__inner {
-		gap: 42px;
-	}
-
-	.work-hero h1 {
-		font-size: clamp(3rem, 13vw, 4.1rem);
-	}
-
-	.work-hero__intro {
-		font-size: 0.95rem;
-	}
-
-	.work-hero__skills {
-		display: grid;
-		gap: 14px;
-	}
-
-	.work-hero__skill {
-		width: 100%;
-	}
-
-	.work-hero__visual {
-		min-height: 290px;
-	}
-
-	.work-hero__laptop {
-		width: 92%;
-		padding: 10px 10px 20px;
-		border-radius: 12px 12px 6px 6px;
-		transform: none;
-	}
-
-	.work-hero__laptop::after {
-		bottom: -10px;
-		height: 13px;
-	}
-
-	.work-hero__phone {
-		right: 0;
-		bottom: 8px;
-		width: 92px;
-		padding: 7px;
-		border-radius: 19px;
-	}
-
-	.work-hero__phone-screen {
-		border-radius: 13px;
-	}
-
-	.work-hero::before {
-		right: -250px;
-		bottom: -110px;
-		width: 500px;
-	}
-
-	.work-hero::after {
-		right: -80px;
-	}
-}
-
-/* ===== SMALL MOBILE ===== */
-@media (max-width: 420px) {
-	.work-hero h1 {
-		font-size: 3rem;
-	}
-
-	.work-hero__visual {
-		min-height: 245px;
-	}
-
-	.work-hero__phone {
-		width: 78px;
-	}
-}
-
-/* ===== REDUCED MOTION ===== */
-@media (prefers-reduced-motion: reduce) {
-	.work-hero__laptop {
-		transition: none;
-	}
-}
-
-/* =========================
-   CONCEPT DESIGNS
-========================= */
-
+/* ===== CONCEPT DESIGNS ===== */
 .portfolio-concepts {
 	position: relative;
 	overflow: hidden;
@@ -777,6 +560,7 @@
 	margin: 0 auto;
 }
 
+/* Intro */
 .portfolio-concepts__intro {
 	max-width: 680px;
 	margin-bottom: 42px;
@@ -805,11 +589,7 @@
 	line-height: 1.75;
 }
 
-
-/* =========================
-   CAROUSEL
-========================= */
-
+/* Carousel*/
 .concept-carousel {
 	display: grid;
 	grid-template-columns: auto minmax(0, 1fr) auto;
@@ -828,11 +608,7 @@
 	transition: transform 350ms ease;
 }
 
-
-/* =========================
-   ARROWS
-========================= */
-
+/* Arrows */
 .concept-carousel__arrow {
 	display: grid;
 	width: 44px;
@@ -860,11 +636,7 @@
 	transform: translateY(-2px);
 }
 
-
-/* =========================
-   CONCEPT CARDS
-========================= */
-
+/* Concept Cards */
 .portfolio-concept-card {
 	overflow: hidden;
 	min-width: 0;
@@ -971,11 +743,7 @@
 	line-height: 1.6;
 }
 
-
-/* =========================
-   INDIVIDUAL CONCEPT COLORS
-========================= */
-
+/* Concept Colors */
 .concept-card--renovation .portfolio-concept-card__visual {
 	background:
 		linear-gradient(
@@ -1028,11 +796,7 @@
 		);
 }
 
-
-/* =========================
-   CAROUSEL FOOTER
-========================= */
-
+/* Carousel Footer */
 .concept-carousel__footer {
 	display: flex;
 	align-items: center;
@@ -1065,70 +829,163 @@
 }
 
 
-/* =========================
-   TABLET
-========================= */
 
+/* ===== INTERACTIONS ===== */
+/* Hero Hover */
+@media (hover: hover) and (pointer: fine) {
+	.work-hero__laptop {
+		transition:
+			transform 300ms ease,
+			box-shadow 300ms ease;
+	}
+	.work-hero__visual:hover .work-hero__laptop {
+		transform:
+			perspective(1000px)
+			rotateY(-2deg)
+			translateY(-4px);
+		box-shadow:
+			0 42px 80px rgba(7, 17, 47, 0.22),
+			0 10px 24px rgba(0, 0, 0, 0.14);
+	}
+}
+
+
+
+/* ===== RESPONSIVE ===== */
+/* Tablet - 950px */
 @media (max-width: 950px) {
+	.work-hero {
+		padding-top: 80px;
+		padding-bottom: 90px;
+	}
+	.work-hero__inner {
+		grid-template-columns: 1fr;
+		gap: 55px;
+	}
+	.work-hero__content {
+		max-width: 720px;
+	}
+	.work-hero__visual {
+		width: min(100%, 760px);
+		margin: 0 auto;
+	}
+	.work-hero__laptop {
+		width: min(90%, 620px);
+	}
+	.work-hero__phone {
+		right: 6%;
+	}
+
 	.concept-carousel__track {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
-
 	.portfolio-concept-card__visual {
 		min-height: 270px;
 	}
 }
 
+/* = Tablet - 900px = */
+@media (max-width: 900px) {
+	.portfolio-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+	.portfolio-toolbar {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+	.portfolio-sort {
+		width: 100%;
+	}
+	.portfolio-sort select {
+		width: 100%;
+	}
+}
 
-/* =========================
-   MOBILE
-========================= */
-
+/* Mobile - 650px */
 @media (max-width: 650px) {
+	.work-hero {
+		padding: 62px 18px 74px;
+	}
+	.work-hero__inner {
+		gap: 42px;
+	}
+	.work-hero h1 {
+		font-size: clamp(3rem, 13vw, 4.1rem);
+	}
+	.work-hero__intro {
+		font-size: 0.95rem;
+	}
+	.work-hero__skills {
+		display: grid;
+		gap: 14px;
+	}
+	.work-hero__skill {
+		width: 100%;
+	}
+	.work-hero__visual {
+		min-height: 290px;
+	}
+	.work-hero__laptop {
+		width: 92%;
+		padding: 10px 10px 20px;
+		border-radius: 12px 12px 6px 6px;
+		transform: none;
+	}
+	.work-hero__laptop::after {
+		bottom: -10px;
+		height: 13px;
+	}
+	.work-hero__phone {
+		right: 0;
+		bottom: 8px;
+		width: 92px;
+		padding: 7px;
+		border-radius: 19px;
+	}
+	.work-hero__phone-screen {
+		border-radius: 13px;
+	}
+	.work-hero::before {
+		right: -250px;
+		bottom: -110px;
+		width: 500px;
+	}
+	.work-hero::after {
+		right: -80px;
+	}
+
 	.portfolio-concepts {
 		padding: 65px 18px 75px;
 	}
-
 	.concept-carousel {
+		position: relative;
 		grid-template-columns: 1fr;
 		gap: 20px;
 	}
-
 	.concept-carousel__viewport {
 		order: 1;
 	}
-
 	.concept-carousel__track {
 		display: flex;
 		gap: 0;
 	}
-
 	.portfolio-concept-card {
 		min-width: 100%;
 	}
-
 	.portfolio-concept-card__visual {
 		min-height: 285px;
 	}
-
 	.concept-carousel__arrow {
 		position: absolute;
 		z-index: 5;
 		top: 50%;
 	}
-
-	.concept-carousel {
-		position: relative;
-	}
-
 	.concept-carousel__arrow--previous {
 		left: 10px;
 	}
-
 	.concept-carousel__arrow--next {
 		right: 10px;
 	}
-
 	.concept-carousel__footer {
 		align-items: flex-start;
 		flex-direction: column;
@@ -1136,12 +993,54 @@
 	}
 }
 
+/* Mobile - 600px */
+@media (max-width: 600px) {
+	.portfolio-section {
+		padding: 60px 18px 72px;
+	}
+	.portfolio-filters {
+		display: grid;
+		width: 100%;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+	.portfolio-filter {
+		width: 100%;
+	}
+	.portfolio-grid {
+		grid-template-columns: 1fr;
+	}
+	.portfolio-card__content {
+		padding: 20px;
+	}
+}
 
-/* =========================
-   REDUCED MOTION
-========================= */
+/* Small Mobile - 420px */
+@media (max-width: 420px) {
+	.work-hero h1 {
+		font-size: 3rem;
+	}
+	.work-hero__visual {
+		min-height: 245px;
+	}
+	.work-hero__phone {
+		width: 78px;
+	}
+}
 
+/* Small Mobile - 390px */
+@media (max-width: 390px) {
+	.portfolio-filters {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* = Reduced Motion = */
 @media (prefers-reduced-motion: reduce) {
+	.work-hero__laptop,
+	.portfolio-card,
+	.portfolio-card__image img,
+	.portfolio-card__link span,
+	.portfolio-filter,
 	.concept-carousel__track,
 	.concept-carousel__arrow {
 		transition: none;

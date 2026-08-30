@@ -10,7 +10,8 @@
 	<title>Portfolio | DM Creative Solutions</title>
 </head>
 <body>
-	<!-- NAVIGATION BAR -->
+
+	<!----- NAVIGATION BAR ----->
 	<header class="site-header">
 		<nav class="site-nav" aria-label="Primary navigation">
 			<a href="index.html" class="site-logo" aria-label="DM Creative Solutions home">
@@ -93,6 +94,7 @@
 			</div>
 		</section>
 
+		<!----- PORTFOLIO PROJECTS ----->
 		<section class="portfolio-section" id="selected-work">
 			<div class="portfolio-section__inner">
 
@@ -110,18 +112,6 @@
 							Web Applications
 						</button>
 
-						<button class="portfolio-filter" type="button" data-filter="concept">
-							Concept Designs
-						</button>
-					</div>
-
-					<div class="portfolio-sort">
-						<label for="portfolio-sort" class="sr-only">Sort projects</label>
-
-						<select id="portfolio-sort">
-							<option value="newest">Newest First</option>
-							<option value="oldest">Oldest First</option>
-						</select>
 					</div>
 				</div>
 
@@ -130,243 +120,9 @@
 					<h2>Explore the Work</h2>
 				</div>
 
-				<div class="portfolio-grid" id="portfolio-grid">
+				<div class="portfolio-grid" id="portfolio-grid" aria-live="polite"></div>
 
-					<article class="portfolio-card" data-category="website">
-						<div class="portfolio-card__browser">
-							<div class="portfolio-card__browser-bar" aria-hidden="true">
-								<span></span>
-								<span></span>
-								<span></span>
-							</div>
-
-							<div class="portfolio-card__image">
-								<img
-								src="https://i.postimg.cc/DzNHvdFz/tovanas-restaurant.webp"
-								alt="Tovana's Restaurant website">
-							</div>
-						</div>
-
-						<div class="portfolio-card__content">
-							<p class="portfolio-card__type">Restaurant Website</p>
-
-							<h3>Tovana’s Restaurant</h3>
-
-							<p class="portfolio-card__description">
-								A warm, inviting restaurant website designed to make menu details, hours, location information, and contact options easy to find.
-							</p>
-
-							<div class="portfolio-card__tags">
-								<span>HTML</span>
-								<span>CSS</span>
-								<span>JavaScript</span>
-							</div>
-
-							<a href="#" class="portfolio-card__link">
-								View Project
-								<span aria-hidden="true">→</span>
-							</a>
-						</div>
-					</article>
-
-					<article class="portfolio-card" data-category="website">
-						<div class="portfolio-card__browser">
-							<div class="portfolio-card__browser-bar" aria-hidden="true">
-								<span></span>
-								<span></span>
-								<span></span>
-							</div>
-
-							<div class="portfolio-card__image">
-								<img
-								src="https://i.postimg.cc/MG2CSbby/Dream-Vacation.webp"
-								alt="Dream Vacation travel landing page">
-							</div>
-						</div>
-
-						<div class="portfolio-card__content">
-							<p class="portfolio-card__type">Travel Landing Page</p>
-
-							<h3>Dream Vacation</h3>
-
-							<p class="portfolio-card__description">
-								An immersive travel landing page created to inspire visitors, highlight destinations, and lead them toward a clear call to action.
-							</p>
-
-							<div class="portfolio-card__tags">
-								<span>HTML</span>
-								<span>CSS</span>
-								<span>JavaScript</span>
-							</div>
-
-							<a href="https://vocal-centaur-04f237.netlify.app/" class="portfolio-card__link" target="_blank" rel="noopener">
-								View Project
-								<span aria-hidden="true">→</span>
-							</a>
-						</div>
-					</article>
-
-					<article class="portfolio-card" data-category="application">
-						<div class="portfolio-card__browser">
-							<div class="portfolio-card__browser-bar" aria-hidden="true">
-								<span></span>
-								<span></span>
-								<span></span>
-							</div>
-
-							<div class="portfolio-card__image">
-								<img
-								src="https://i.postimg.cc/8CQ2SBBv/Forecast.webp"
-								alt="Forecast weather application">
-							</div>
-						</div>
-
-						<div class="portfolio-card__content">
-							<p class="portfolio-card__type">Weather Application</p>
-
-							<h3>Forecast</h3>
-
-							<p class="portfolio-card__description">
-								A clean weather application that presents real-time conditions and forecast data in a polished, easy-to-scan interface.
-							</p>
-
-							<div class="portfolio-card__tags">
-								<span>HTML</span>
-								<span>CSS</span>
-								<span>JavaScript</span>
-								<span>API</span>
-							</div>
-
-							<a href="https://dm-forecast-app.netlify.app/" class="portfolio-card__link" target="_blank" rel="noopener">
-								View Project
-								<span aria-hidden="true">→</span>
-							</a>
-						</div>
-					</article>
-
-					<article class="portfolio-card" data-category="website">
-						<div class="portfolio-card__browser">
-							<div class="portfolio-card__browser-bar" aria-hidden="true">
-								<span></span>
-								<span></span>
-								<span></span>
-							</div>
-
-							<div class="portfolio-card__image">
-								<img
-								src="https://i.postimg.cc/GpwWCJJY/On-Repeat.webp"
-								alt="On Repeat music experience">
-							</div>
-						</div>
-
-						<div class="portfolio-card__content">
-							<p class="portfolio-card__type">Music Experience</p>
-
-							<h3>On Repeat</h3>
-
-							<p class="portfolio-card__description">
-								A personal music experience with a dark editorial direction, interactive chapters, and a strong visual atmosphere.
-							</p>
-
-							<div class="portfolio-card__tags">
-								<span>HTML</span>
-								<span>CSS</span>
-								<span>JavaScript</span>
-							</div>
-
-							<a href="https://on-repeat.netlify.app/" class="portfolio-card__link" target="_blank" rel="noopener">
-								View Project
-								<span aria-hidden="true">→</span>
-							</a>
-						</div>
-					</article>
-
-					<article class="portfolio-card" data-category="website">
-						<div class="portfolio-card__browser">
-							<div class="portfolio-card__browser-bar" aria-hidden="true">
-								<span></span>
-								<span></span>
-								<span></span>
-							</div>
-
-							<div class="portfolio-card__image">
-								<img
-								src="https://i.postimg.cc/XqZYGkZh/Pet-Project.webp"
-								alt="Pet Tribute memorial website">
-							</div>
-						</div>
-
-						<div class="portfolio-card__content">
-							<p class="portfolio-card__type">Tribute Website</p>
-
-							<h3>Pet Tribute</h3>
-
-							<p class="portfolio-card__description">
-								A heartfelt memorial website designed to celebrate a beloved pet through photographs, stories, and meaningful details.
-							</p>
-
-							<div class="portfolio-card__tags">
-								<span>HTML</span>
-								<span>CSS</span>
-								<span>JavaScript</span>
-							</div>
-
-							<a href="https://preeminent-buttercream-5f1d8f.netlify.app/" class="portfolio-card__link" target="_blank" rel="noopener">
-								View Project
-								<span aria-hidden="true">→</span>
-							</a>
-						</div>
-					</article>
-
-					<article class="portfolio-card portfolio-card--placeholder" data-category="website">
-						<div class="portfolio-card__placeholder">
-							<span>Project Preview</span>
-						</div>
-
-						<div class="portfolio-card__content">
-							<p class="portfolio-card__type">Website Project</p>
-
-							<h3>Project Name</h3>
-
-							<p class="portfolio-card__description">
-								Additional project information will be added here.
-							</p>
-
-							<div class="portfolio-card__tags">
-								<span>HTML</span>
-								<span>CSS</span>
-								<span>JavaScript</span>
-							</div>
-
-							<span class="portfolio-card__link portfolio-card__link--disabled">
-								Coming Soon
-							</span>
-						</div>
-					</article>
-
-				</div>
-
-				<nav class="portfolio-pagination" aria-label="Portfolio pages">
-					<button class="portfolio-pagination__arrow" type="button" aria-label="Previous page">
-						←
-					</button>
-
-					<button class="portfolio-pagination__page is-active" type="button" aria-current="page">
-						1
-					</button>
-
-					<button class="portfolio-pagination__page" type="button">
-						2
-					</button>
-
-					<button class="portfolio-pagination__page" type="button">
-						3
-					</button>
-
-					<button class="portfolio-pagination__arrow" type="button" aria-label="Next page">
-						→
-					</button>
-				</nav>
+				<nav class="portfolio-pagination" id="portfolio-pagination" aria-label="Portfolio pages"></nav>
 
 			</div>
 		</section>

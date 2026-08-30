@@ -153,7 +153,7 @@ nextButton?.addEventListener("click", () => {
     renderProject(nextIndex);
 });
 
-const navToggle = document.querySelector(".nav-toggle");
+const navToggle = document.querySelector(".site-nav__toggle");
 const siteNav = document.querySelector(".site-nav");
 
 navToggle?.addEventListener("click", () => {
@@ -168,3 +168,9 @@ siteNav?.querySelectorAll("a").forEach((link) => {
         navToggle?.setAttribute("aria-expanded", "false");
     });
 });
+
+const currentYear = document.querySelector("#current-year");
+
+if (currentYear) {
+    currentYear.textContent = new Date().getFullYear();
+}
