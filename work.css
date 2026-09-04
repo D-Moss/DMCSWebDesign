@@ -745,7 +745,7 @@
 
 /* Concept Colors */
 .concept-card--renovation .portfolio-concept-card__visual {
-	background:
+	/*background:
 		linear-gradient(
 			rgba(11, 42, 74, 0.08),
 			rgba(11, 42, 74, 0.52)
@@ -754,7 +754,10 @@
 			135deg,
 			#8c827a,
 			#3e464d
-		);
+		);*/
+		background: url("https://i.postimg.cc/qBDKrP0v/exterior.png")
+		center center / cover
+		no-repeat;
 }
 
 .concept-card--landscaping .portfolio-concept-card__visual {
@@ -826,6 +829,137 @@
 	margin: 0;
 	color: var(--gray-dark);
 	font-size: 0.78rem;
+}
+
+
+
+/* ===== COMPLETED CONCEPT ===== */
+.portfolio-concept-card__description {
+	margin: 10px 0 0;
+	color: var(--gray-dark);
+	font-size: 0.78rem;
+	line-height: 1.6;
+}
+
+.portfolio-concept-card__status--complete {
+	background: rgba(255, 255, 255, 0.95);
+	color: var(--creative);
+}
+
+.portfolio-concept-card__link {
+	display: inline-flex;
+	margin-top: 18px;
+	padding: 0;
+	align-items: center;
+	gap: 7px;
+	border: 0;
+	background: transparent;
+	color: var(--creative);
+	font-family: "Inter", sans-serif;
+	font-size: 0.76rem;
+	font-weight: 800;
+	cursor: pointer;
+}
+
+.portfolio-concept-card__link span {
+	transition: transform 180ms ease;
+}
+
+.portfolio-concept-card__link:hover span {
+	transform: translateX(4px);
+}
+
+/* ===== CONCEPT MODAL ===== */
+.concept-modal {
+	width: min(1000px, calc(100% - 40px));
+	max-width: none;
+	max-height: 92vh;
+	padding: 0;
+	border: 0;
+	border-radius: 16px;
+	background: #ffffff;
+	box-shadow:
+		0 35px 90px rgba(0, 0, 0, 0.28);
+}
+
+.concept-modal::backdrop {
+	background: rgba(7, 17, 47, 0.82);
+	backdrop-filter: blur(4px);
+}
+
+.concept-modal__window {
+	overflow: hidden;
+	display: flex;
+	max-height: 92vh;
+	flex-direction: column;
+}
+
+.concept-modal__header {
+	display: flex;
+	flex-shrink: 0;
+	align-items: center;
+	justify-content: space-between;
+	gap: 24px;
+	padding: 20px 24px;
+	border-bottom: 1px solid rgba(0, 11, 117, 0.1);
+	background: #ffffff;
+}
+
+.concept-modal__eyebrow {
+	margin: 0 0 4px;
+	color: var(--creative);
+	font-size: 0.64rem;
+	font-weight: 800;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.concept-modal__header h2 {
+	margin: 0;
+	color: var(--navy);
+	font-family: "Playfair Display", serif;
+	font-size: clamp(1.5rem, 3vw, 2.2rem);
+	font-weight: 600;
+}
+
+.concept-modal__close {
+	display: grid;
+	width: 42px;
+	height: 42px;
+	flex-shrink: 0;
+	place-items: center;
+	border: 1px solid rgba(0, 11, 117, 0.12);
+	border-radius: 50%;
+	background: #ffffff;
+	color: var(--navy);
+	font-family: inherit;
+	font-size: 1.6rem;
+	line-height: 1;
+	cursor: pointer;
+	transition:
+		background-color 180ms ease,
+		color 180ms ease,
+		border-color 180ms ease;
+}
+
+.concept-modal__close:hover {
+	border-color: var(--creative);
+	background: var(--creative);
+	color: #ffffff;
+}
+
+.concept-modal__image-wrapper {
+	overflow-y: auto;
+	overflow-x: hidden;
+	background: #ffffff;
+}
+
+.concept-modal__image {
+	display: block;
+	width: 50%;
+	max-width: 750px;
+	height: auto;
+	margin: 0 auto;
 }
 
 
@@ -990,6 +1124,17 @@
 		align-items: flex-start;
 		flex-direction: column;
 		gap: 8px;
+	}
+	.concept-modal {
+		width: calc(100% - 20px);
+		max-height: 94vh;
+		border-radius: 12px;
+	}
+	.concept-modal__window {
+		max-height: 94vh;
+	}
+	.concept-modal__header {
+		padding: 16px;
 	}
 }
 

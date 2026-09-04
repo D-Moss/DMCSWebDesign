@@ -155,8 +155,8 @@
 
 							<article class="portfolio-concept-card concept-card--renovation">
 								<div class="portfolio-concept-card__visual">
-									<span class="portfolio-concept-card__status">
-										In Development
+									<span class="portfolio-concept-card__status portfolio-concept-card__status--complete">
+										Complete Concept
 									</span>
 
 									<div class="portfolio-concept-card__visual-copy">
@@ -172,9 +172,14 @@
 
 									<h3>Home Renovation</h3>
 
-									<p>
+									<p class="portfolio-concept-card__description">
 										Bold, modern, and built around premium craftsmanship.
 									</p>
+
+									<button class="portfolio-concept-card__link" type="button" data-concept-image="https://i.postimg.cc/rw3dpts0/Northridge-Home-Renovation.png" data-concept-title="Home Renovation">
+										View Full Concept
+										<span aria-hidden="true">→</span>
+									</button>
 								</div>
 							</article>
 
@@ -276,6 +281,33 @@
 
 			</div>
 		</section>
+
+		<!-- CONCEPT DESIGN MODAL -->
+		<dialog class="concept-modal" id="concept-modal" aria-labelledby="concept-modal-title">
+			<div class="concept-modal__window">
+
+				<div class="concept-modal__header">
+					<div>
+						<p class="concept-modal__eyebrow">
+							Original Concept Design
+						</p>
+
+						<h2 id="concept-modal-title">
+							Home Renovation
+						</h2>
+					</div>
+
+					<button class="concept-modal__close" type="button" aria-label="Close concept">
+						×
+					</button>
+				</div>
+
+				<div class="concept-modal__image-wrapper">
+					<img class="concept-modal__image" src="images/Northridge-Home-Renovation.png" alt="">
+				</div>
+
+			</div>
+		</dialog>
 		
 		<!-- CONTACT SECTION -->
 		<section class="project-cta" id="contact">

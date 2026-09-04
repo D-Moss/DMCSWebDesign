@@ -519,11 +519,61 @@
 		}
 	});
 
-
 	window.addEventListener("resize", () => {
 		updateConceptCarousel();
 	});
 
+/* ===== CONCEPT DESIGN MODAL ===== */
+	const conceptModal =
+	document.querySelector("#concept-modal");
+
+	const conceptModalImage =
+	document.querySelector(".concept-modal__image");
+
+	const conceptModalTitle =
+	document.querySelector("#concept-modal-title");
+
+	const conceptModalClose =
+	document.querySelector(".concept-modal__close");
+
+	const conceptModalButtons =
+	document.querySelectorAll(
+		".portfolio-concept-card__link"
+		);
+
+	conceptModalButtons.forEach((button) => {
+		button.addEventListener("click", () => {
+			const image =
+			button.dataset.conceptImage;
+
+			const title =
+			button.dataset.conceptTitle;
+
+			conceptModalImage.src = image;
+
+			conceptModalImage.alt =
+			`Full ${title} website concept`;
+
+			conceptModalTitle.textContent =
+			title;
+
+			conceptModal.showModal();
+		});
+	});
+
+	conceptModalClose?.addEventListener("click", () => {
+		conceptModal.close();
+	});
+
+	conceptModal?.addEventListener("click", (event) => {
+		if (event.target === conceptModal) {
+			conceptModal.close();
+		}
+	});
+
+	conceptModal?.addEventListener("close", () => {
+		conceptModalImage.src = "";
+	});
 
 	renderPortfolio();
 	updateConceptCarousel();
