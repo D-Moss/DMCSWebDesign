@@ -761,7 +761,7 @@
 }
 
 .concept-card--landscaping .portfolio-concept-card__visual {
-	background:
+	/*background:
 		linear-gradient(
 			rgba(20, 65, 35, 0.08),
 			rgba(20, 65, 35, 0.48)
@@ -770,7 +770,10 @@
 			135deg,
 			#9ab58a,
 			#315b3b
-		);
+		);*/
+		background: url("https://i.postimg.cc/R0YNTr0R/hero-garden.png")
+		center center / cover
+		no-repeat;
 }
 
 .concept-card--detailing .portfolio-concept-card__visual {

@@ -1,0 +1,1101 @@
+/* =========================================
+   ROOT
+========================================= */
+:root {
+    --green-deep: #173a2c;
+    --green-dark: #102d22;
+    --green-medium: #4f6d58;
+    --sage: #aebca5;
+    --sage-light: #dce3d5;
+
+    --cream: #f7f3e9;
+    --cream-soft: #fbf9f3;
+    --white: #ffffff;
+
+    --brown: #6b5c4c;
+    --text: #252820;
+    --text-soft: #67695f;
+
+    --serif: "Cormorant Garamond", Georgia, serif;
+    --sans: "Inter", Arial, sans-serif;
+
+    --container: 1400px;
+}
+
+/* =========================================
+   RESET
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--sans);
+    background: var(--cream-soft);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+.container {
+    width: min(92%, var(--container));
+    margin-inline: auto;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+/* =========================================
+   TYPOGRAPHY
+========================================= */
+h1,
+h2,
+h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    line-height: 1;
+}
+
+h2 {
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+}
+
+.section-label {
+    margin-bottom: 14px;
+
+    font-size: 0.76rem;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+
+    color: var(--green-medium);
+}
+
+.section-label-light {
+    color: var(--sage-light);
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    min-height: 52px;
+
+    padding: 13px 25px;
+
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    font-size: 0.88rem;
+    font-weight: 500;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-light {
+    background: rgba(247, 243, 233, 0.92);
+    color: var(--green-dark);
+}
+
+.btn-light:hover {
+    background: var(--white);
+}
+
+.btn-header {
+    background: var(--green-dark);
+    color: var(--white);
+}
+
+.btn-header:hover {
+    background: var(--green-deep);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.site-header {
+    position: relative;
+    z-index: 100;
+
+    background: rgba(251, 249, 243, 0.98);
+
+    border-bottom: 1px solid rgba(23, 58, 44, 0.08);
+}
+
+.nav-container {
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 35px;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-mark {
+    position: relative;
+
+    width: 44px;
+    height: 49px;
+}
+
+.logo-stem {
+    position: absolute;
+
+    left: 22px;
+    top: 4px;
+
+    width: 1px;
+    height: 43px;
+
+    background: var(--green-dark);
+
+    transform: rotate(30deg);
+}
+
+.logo-leaf {
+    position: absolute;
+
+    width: 12px;
+    height: 18px;
+
+    background: var(--green-dark);
+
+    border-radius: 90% 0 90% 0;
+}
+
+.leaf-one {
+    top: 4px;
+    left: 26px;
+}
+
+.leaf-two {
+    top: 14px;
+    left: 11px;
+
+    transform: rotate(85deg);
+}
+
+.leaf-three {
+    top: 22px;
+    left: 28px;
+
+    transform: rotate(-20deg);
+}
+
+.leaf-four {
+    top: 30px;
+    left: 12px;
+
+    transform: rotate(75deg);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-name {
+    font-family: var(--serif);
+
+    font-size: 1.85rem;
+    line-height: 0.95;
+
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.logo-subtitle {
+    margin-top: 6px;
+
+    font-size: 0.58rem;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+
+/* Navigation */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.main-nav a {
+    position: relative;
+
+    font-family: var(--serif);
+    font-size: 1rem;
+}
+
+.main-nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--green-dark);
+
+    transition: width 0.25s ease;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 26px;
+    height: 2px;
+
+    margin: 6px 0;
+
+    background: var(--green-dark);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    position: relative;
+
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    color: var(--white);
+}
+
+.hero-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 32, 20, 0.78) 0%,
+            rgba(10, 32, 20, 0.54) 35%,
+            rgba(10, 32, 20, 0.08) 70%
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.hero-copy {
+    max-width: 670px;
+}
+
+.eyebrow {
+    margin-bottom: 18px;
+
+    font-size: 0.74rem;
+
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+}
+
+.hero h1 {
+    font-size: clamp(4.2rem, 7.5vw, 7.2rem);
+    line-height: 0.82;
+}
+
+.hero h1 em {
+    display: block;
+
+    margin-top: 18px;
+
+    font-weight: 400;
+}
+
+.hero-description {
+    max-width: 470px;
+
+    margin: 32px 0;
+
+    font-family: var(--serif);
+
+    font-size: 1.4rem;
+    line-height: 1.45;
+}
+
+.hero-manifesto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+
+    padding: 28px 30px;
+
+    background: rgba(31, 54, 39, 0.72);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    border-radius: 7px;
+
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+
+    font-family: var(--serif);
+    font-size: 1rem;
+}
+
+.hero-manifesto span {
+    position: relative;
+
+    padding-left: 38px;
+}
+
+.hero-manifesto span::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+
+    width: 25px;
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.hero-manifesto strong {
+    margin-top: 8px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.services {
+    background: var(--cream-soft);
+}
+
+.services-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 3fr;
+
+    gap: 70px;
+    align-items: center;
+}
+
+.services-intro h2 {
+    font-size: clamp(2.7rem, 4vw, 4rem);
+}
+
+.script-line {
+    margin-top: 12px;
+
+    font-family: var(--serif);
+    font-style: italic;
+
+    font-size: 2rem;
+    line-height: 1.1;
+
+    color: var(--green-deep);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 30px;
+}
+
+.service-card {
+    text-align: center;
+}
+
+.service-icon {
+    width: 66px;
+    height: 66px;
+
+    display: grid;
+    place-items: center;
+
+    margin: 0 auto 20px;
+
+    background: var(--sage-light);
+
+    border-radius: 50%;
+
+    font-size: 1.7rem;
+}
+
+.service-card h3 {
+    min-height: 48px;
+
+    margin-bottom: 10px;
+
+    font-size: 1.4rem;
+}
+
+.service-card p {
+    font-size: 0.76rem;
+    line-height: 1.6;
+
+    color: var(--text-soft);
+}
+
+
+/* =========================================
+   SEASONS
+========================================= */
+
+.seasons {
+    background: #efede5;
+
+    padding-top: 75px;
+}
+
+.season-heading {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+
+    gap: 80px;
+    align-items: end;
+
+    padding-bottom: 45px;
+}
+
+.season-heading p:last-child {
+    max-width: 500px;
+
+    font-family: var(--serif);
+    font-size: 1.25rem;
+
+    color: var(--text-soft);
+}
+
+.season-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.season-card {
+    position: relative;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+}
+
+.season-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.season-card:hover img {
+    transform: scale(1.04);
+}
+
+.season-caption {
+    position: absolute;
+
+    left: 50%;
+    bottom: 12px;
+
+    width: min(64%, 220px);
+
+    transform: translateX(-50%);
+
+    padding: 11px 12px;
+
+    background: rgba(248, 246, 239, 0.83);
+
+    text-align: center;
+}
+
+.season-caption span {
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 0.62rem;
+
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+}
+
+.season-caption strong {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+
+/* =========================================
+   FEATURED GARDENS
+========================================= */
+
+.featured {
+    background: var(--cream-soft);
+}
+
+.section-heading-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+    gap: 30px;
+
+    margin-bottom: 45px;
+}
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding-bottom: 5px;
+
+    border-bottom: 1px solid var(--green-deep);
+
+    font-family: var(--serif);
+    font-size: 1.05rem;
+
+    color: var(--green-dark);
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.featured-image {
+    height: 310px;
+
+    margin-bottom: 16px;
+
+    overflow: hidden;
+}
+
+.featured-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.featured-card:hover img {
+    transform: scale(1.035);
+}
+
+.featured-card h3 {
+    margin-bottom: 4px;
+
+    font-size: 1.6rem;
+}
+
+.featured-card p {
+    font-family: var(--serif);
+    font-size: 1.05rem;
+
+    color: var(--text-soft);
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta {
+    position: relative;
+
+    min-height: 250px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    color: var(--white);
+}
+
+.cta-background {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.cta-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(16, 45, 34, 0.98),
+            rgba(16, 45, 34, 0.84)
+        );
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 50px;
+
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.cta-content h2 {
+    margin-bottom: 8px;
+
+    font-size: clamp(2.2rem, 4vw, 4rem);
+}
+
+.cta-content p {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    background: var(--green-dark);
+    color: rgba(255, 255, 255, 0.88);
+
+    padding: 70px 0 25px;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.1fr 2fr 1fr;
+
+    gap: 60px;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    font-size: 0.65rem;
+}
+
+.footer-logo-name {
+    font-family: var(--serif);
+    font-size: 2rem;
+
+    letter-spacing: 0.08em;
+}
+
+.footer-tagline {
+    margin-top: 14px;
+
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.25rem;
+
+    color: var(--sage-light);
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 28px;
+
+    font-family: var(--serif);
+}
+
+.footer-nav a:hover,
+.footer-bottom a:hover {
+    color: var(--white);
+}
+
+.footer-message {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    font-family: var(--serif);
+    font-style: italic;
+
+    text-align: right;
+}
+
+.footer-message span {
+    font-size: 1.6rem;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-top: 50px;
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+
+    font-size: 0.7rem;
+
+    color: rgba(255, 255, 255, 0.63);
+}
+
+.footer-bottom div {
+    display: flex;
+    gap: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .btn-header {
+        display: none;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(3, 1fr);
+
+        row-gap: 45px;
+    }
+
+    .services-layout {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .section {
+        padding: 75px 0;
+    }
+
+
+    /* Navigation */
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        position: absolute;
+
+        left: 0;
+        top: 82px;
+
+        width: 100%;
+
+        display: none;
+        flex-direction: column;
+
+        gap: 0;
+
+        background: var(--cream-soft);
+
+        border-top: 1px solid rgba(23, 58, 44, 0.12);
+
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.07);
+    }
+
+    .main-nav.open {
+        display: flex;
+    }
+
+    .main-nav a {
+        width: 100%;
+
+        padding: 16px 6%;
+
+        border-bottom: 1px solid rgba(23, 58, 44, 0.08);
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 700px;
+    }
+
+    .hero-content {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 60px;
+    }
+
+    .hero-manifesto {
+        display: none;
+    }
+
+    .hero-overlay {
+        background: rgba(10, 32, 20, 0.55);
+    }
+
+
+    /* Seasons */
+
+    .season-heading {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .season-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Featured */
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-image {
+        height: 420px;
+    }
+
+
+    /* CTA */
+
+    .cta-content {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    /* Footer */
+
+    .footer-main {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .footer-nav {
+        justify-content: center;
+    }
+
+    .footer-message {
+        justify-content: center;
+
+        text-align: left;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .nav-container {
+        min-height: 72px;
+    }
+
+    .logo-name {
+        font-size: 1.5rem;
+    }
+
+    .logo-subtitle {
+        font-size: 0.49rem;
+    }
+
+    .logo-mark {
+        width: 36px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 650px;
+    }
+
+    .hero-content {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3.6rem, 17vw, 5rem);
+    }
+
+    .hero-description {
+        font-size: 1.25rem;
+    }
+
+
+    /* Services */
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 45px 20px;
+    }
+
+
+    /* Seasons */
+
+    .season-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .season-card {
+        height: 390px;
+    }
+
+
+    /* Featured */
+
+    .section-heading-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .featured-image {
+        height: 300px;
+    }
+
+
+    /* Footer */
+
+    .footer-nav {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .footer-bottom div {
+        justify-content: center;
+    }
+
+}

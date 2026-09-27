@@ -1917,7 +1917,7 @@ a {
     z-index: 2;
     display: inline-flex;
     padding: 0.5rem 0.75rem;
-    background: rgba(255, 255, 255, 0.88);
+    background: rgba(255, 255, 255, 0.72);
     color: var(--navy);
     border: 1px solid rgba(255, 255, 255, 0.65);
     border-radius: 999px;
@@ -2080,6 +2080,34 @@ a {
     outline: 3px solid var(--blush);
     outline-offset: 5px;
     border-radius: 0.25rem;
+}
+
+/* ===== RELEASED CONCEPT CARDS ===== */
+
+.concept-card--released .concept-card__visual {
+    padding: 0;
+    background: var(--gray);
+}
+
+.concept-card--released .concept-card__visual::before,
+.concept-card--released .concept-card__visual::after {
+    display: none;
+}
+
+.concept-card--released .concept-card__image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.concept-card--released .concept-card__status {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    z-index: 2;
 }
 
 /* =========================
